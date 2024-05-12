@@ -1,7 +1,7 @@
 (heaps
    #ifdef HX_XBOX
    (main
-      (size 105000000))
+      (size 113000000)) ;dx - 8mb higher than vanilla, because dx is fucking huge
    (char
       (size 32000000)
       (allow_temp FALSE))
@@ -9,6 +9,15 @@
    #ifdef HX_PS3
    (main
       (size
+         #ifdef REGION_EUROPE
+         {if_else {file_exists "GD:/dev_hdd0/game/BLES00986/USRDIR/dx_high_memory.dta"}
+            {if_else {> {size {read_file "GD:/dev_hdd0/game/BLES00986/USRDIR/dx_high_memory.dta"}} 0}
+               {elem {find {read_file "GD:/dev_hdd0/game/BLES00986/USRDIR/dx_high_memory.dta"} dx_high_memory} 1}
+               131000000
+            }
+            131000000
+         }
+         #else
          {if_else {file_exists "GD:/dev_hdd0/game/BLUS30463/USRDIR/dx_high_memory.dta"}
             {if_else {> {size {read_file "GD:/dev_hdd0/game/BLUS30463/USRDIR/dx_high_memory.dta"}} 0}
                {elem {find {read_file "GD:/dev_hdd0/game/BLUS30463/USRDIR/dx_high_memory.dta"} dx_high_memory} 1}
@@ -16,6 +25,7 @@
             }
             131000000
          }
+         #endif
       )
    )
    (char
@@ -27,11 +37,13 @@
    #endif
    #ifdef HX_WII
    (main
-      (size 110000000)
-      (region 1))
+      (size 134217728)
+      (region 1)
+      (allow_temp TRUE))
    (fast
-      (size 17800000)
-      (region 0))
+      (size 25165824)
+      (region 0)
+      (allow_temp TRUE))
    #endif
    #ifdef HX_PC
    (main
@@ -39,7 +51,7 @@
    #endif)
 (pool
    #ifdef HX_WII
-   (big_hunk 3000000)
+   (big_hunk 1024)
    #endif
    #ifdef HX_PS3
    (big_hunk 18000000)
@@ -51,4 +63,9 @@
    (big_hunk 18000000)
    #endif)
 (enable_tracking FALSE)
+#ifdef HX_WII
+(track_stl TRUE)
+(check_consistency 0)
+#else
 (track_stl FALSE)
+#endif

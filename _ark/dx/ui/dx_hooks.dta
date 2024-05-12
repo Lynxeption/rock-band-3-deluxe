@@ -2,6 +2,7 @@
 #include dx_ui_init.dta
 #include dx_ui_screens.dta
 #include dx_ui_new_overshell.dta
+#include dx_goal_hooks.dta
 
 {set $dx_metamusic (DX_METAMUSIC)}
 {foreach $entry $dx_metamusic
@@ -9,6 +10,7 @@
 }
 
 {push_back {find $syscfg videos} (dx_intro_movie (files dx_intro_movie.bik) (fill_width TRUE))}
+{push_back {find $syscfg videos} (dx_intro_movie_wii (files dx_intro_movie_wii.bik) (fill_width TRUE))}
 
 {set $dx_added_sources (DX_ADDED_SOURCES)}
 {foreach $entry $dx_added_sources
@@ -58,84 +60,7 @@
    {push_back {find $syscfg campaign accomplishment_info accomplishments acc_dlc_ugcrap filter} $entry}
 }
 
-{push_back {find $syscfg campaign accomplishment_info accomplishments}
-   (acc_dx_coverband
-      (category acc_cat_band_dlc)
-      (accomplishment_type kAccomplishmentTypeSongListConditional)
-      (metascore_value career_fans_medium)
-      (units_token unit_songs_plural)
-      (units_token_singular unit_songs_singular)
-      (dynamic_prereqs
-         (num_songs #ifdef HX_XBOX 28 #else 26 #endif)
-         (songs action ballroomblitz bangagong beetlebum brassinpocket cherrybomb everfalleninlove fortunateson greengrass hardtohandle heroes jukeboxhero lasttraintoclarksville limelight missqueen mysharona nib numberofthebeast #ifdef HX_XBOX paranoid #endif queenbitch #ifdef HX_XBOX runtothehills #endif songwithamission sweetleaf tenspeed tomsawyer trainkeptarollin warpigs workingman))
-      (conditions
-         (stars 2))
-      (songs action ballroomblitz bangagong beetlebum brassinpocket cherrybomb everfalleninlove fortunateson greengrass hardtohandle heroes jukeboxhero lasttraintoclarksville limelight missqueen mysharona nib numberofthebeast #ifdef HX_XBOX paranoid #endif queenbitch #ifdef HX_XBOX runtothehills #endif songwithamission sweetleaf tenspeed tomsawyer trainkeptarollin warpigs workingman)
-   )
-}
-
-{push_back {find $syscfg campaign accomplishment_info accomplishments}
-   (acc_dx_hourglass
-      (category acc_cat_guitar_dlc)
-      (accomplishment_type kAccomplishmentTypeSongListConditional)
-      (metascore_value career_fans_expert)
-      (units_token unit_songs_plural)
-      (units_token_singular unit_songs_singular)
-      (dynamic_prereqs
-         (num_songs 1)
-         (songs UGC_5010012))
-      (conditions
-         (accuracy
-            100
-            (instrument kScoreGuitar)
-            (difficulty kDifficultyExpert))
-         (streak
-            2741
-            (instrument kScoreGuitar)
-            (difficulty kDifficultyExpert)))
-      (songs UGC_5010012)
-   )
-}
-
-{push_back {find $syscfg campaign accomplishment_info accomplishments}
-   (acc_dx_strumsaga
-      (category acc_cat_guitar_dlc)
-      (accomplishment_type kAccomplishmentTypeSongListConditional)
-      (metascore_value career_fans_expert)
-      (units_token unit_songs_plural)
-      (units_token_singular unit_songs_singular)
-      (dynamic_prereqs
-         (num_songs 5)
-         (songs crawl greengrass eastjesusnowhere letthereberock_live thrasher))
-      (conditions
-         (stars
-            5
-            (instrument kScoreGuitar)
-            (difficulty kDifficultyExpert))) 
-      (songs crawl greengrass eastjesusnowhere letthereberock_live thrasher)
-   )
-}
-
-{push_back {find $syscfg campaign accomplishment_info accomplishments}
-   (acc_dx_slayqueen
-      (category acc_cat_vox_dlc)
-      (accomplishment_type kAccomplishmentTypeSongListConditional)
-      (metascore_value career_fans_expert)
-      (units_token unit_songs_plural)
-      (units_token_singular unit_songs_singular)
-      (dynamic_prereqs
-         (num_songs 6)
-         (songs beforehecheats callmemaybe justdance miserybusiness2 parrtyintheusa sowhat))
-      (conditions
-         (stars
-            5
-            (instrument kScoreVocals)
-            (difficulty kDifficultyExpert)))
-      (songs beforehecheats callmemaybe justdance miserybusiness2 parrtyintheusa sowhat)
-   )
-}
-
-{set_elem {find $syscfg performance_awards award_flawless} 1 {quote {== {/ {$player longest_streak} {$player get_gem_count}} 1.0}}}
+;{set_elem {find $syscfg performance_awards award_flawless} 1 {quote {== {/ {$player longest_streak} {$player get_gem_count}} 1.0}}}
 
 ;{set_elem {find $syscfg modes defaults allow_overdrive_phrases} 1 {quote {! {&& {session_mgr is_local} {modifier_mgr is_modifier_active mod_dx_no_overdrive}}}}}
 ;{set_elem {find $syscfg modes defaults enable_overdrive} 1 {quote {! {&& {session_mgr is_local} {modifier_mgr is_modifier_active mod_dx_no_overdrive}}}}}
@@ -147,7 +72,7 @@
 {push_back {find $syscfg beatmatcher callbacks sixteenth_note} {quote {unless {gamemode in_mode trainer} {dx_bot_overdrive_handler}}}}
 {push_back {find $syscfg beatmatcher callbacks sixteenth_note} {quote {unless {gamemode in_mode trainer} {dx_current_section_fetcher}}}}
 {push_back {find $syscfg beatmatcher callbacks sixteenth_note} {quote {if {|| {! {gamemode in_mode campaign}} {! {gamemode in_mode trainer}}} {coop_track_panel dx_set_star_display_pos}}}}
-{push_back {find $syscfg beatmatcher callbacks beat} {quote {if $dx_customizer {coop_track_panel track_texture_reset_handler}}}}
+{push_back {find $syscfg beatmatcher callbacks beat} {quote {if {&& $dx_refresh_beatmatch $dx_customizer} {coop_track_panel track_texture_reset_handler}}}}
 {push_back {find $syscfg beatmatcher callbacks beat} {quote {unless {gamemode in_mode trainer} DX_MTV_BPM_HANDLER}}}
 {push_back {find $syscfg beatmatcher callbacks beat} {quote {unless {gamemode in_mode trainer} DX_COUNTDOWN_TRACKER}}}
 {push_back {find $syscfg beatmatcher callbacks beat} {quote {unless {gamemode in_mode trainer} {dx_bot_overdrive_depletor}}}}

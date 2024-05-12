@@ -1,8 +1,32 @@
+#include ../../dx/ui/seldiff/dx_seldiff_handles.dta
 {new
    SelectDifficultyPanel
    part_difficulty_panel
    (file seldiff.milo)
    (marquee_rotation_ms 3000)
+   (dx_prep_info
+      {if {! {exists play_custom.color}}
+         {new UIColor play_custom.color}
+         {play_custom.color set color {pack_color 1 1 1}}
+      }
+      {if {! {exists play_prep_text.lbl}}
+         {new BandLabel play_prep_text.lbl}
+         {play_prep_text.lbl set resource_name "pentatonic_outline"}
+         {play_prep_text.lbl set_showing TRUE}
+         {play_prep_text.lbl set_local_scale 1 1 1}
+         {play_prep_text.lbl set_local_pos -220 0 160}
+         {play_prep_text.lbl set text_size 40}
+         {play_prep_text.lbl set fit_type 2}
+         {play_prep_text.lbl set alignment kTopLeft}
+         {play_prep_text.lbl set width 500}
+         {play_prep_text.lbl set height 40}
+         {play_prep_text.lbl set alpha 1}
+         {play_prep_text.lbl set color_override play_custom.color}
+         {career.grp add_object play_prep_text.lbl}
+      }
+      {career.grp set_showing TRUE}
+      {play_prep_text.lbl set text_token {sprint "Welcome to Play a Show!\nGrab your axe and give the crowd a great opener!"}}
+   )
    (enter
       {tour.grp set_showing FALSE}
       {career.grp set_showing FALSE}
@@ -36,7 +60,11 @@
             {career.grp set_showing TRUE})
          ({$this is_battle}
             {meta_performer update_battle_type_label battle_type.lbl}
-            {battle.grp set_showing TRUE})})
+            {battle.grp set_showing TRUE})}
+      {if $dx_prep_show_flow
+         {$this dx_prep_info}
+      }
+   )
    (update_tour_setlist_label
       ($filter $song_count)
       {setlist_label.grp set showing TRUE}
@@ -107,9 +135,156 @@
             {7_player.lbl set text_token seldiff_7_player_off_with_full_band})
          {7_player.grp set_showing FALSE}})}
 {new
+   SelectDifficultyPanel
+   dx_play_a_show_panel
+   (file seldiff.milo)
+   (marquee_rotation_ms 3000)
+   DX_SEL_DIFF_HANDLES
+   (enter
+      {song_preview.lbl set_token_fmt dx_play_a_show_welcome}
+      {set $current_voted_song FALSE}
+      {career.pic set tex_file "dx/custom_textures/_additional_textures/acc_dx_hourglass_keep.png"}
+      {song_preview.lbl set_token_fmt dx_play_a_show_welcome}
+      {tour.grp set_showing FALSE}
+      {career.grp set_showing TRUE}
+      {battle.grp set_showing FALSE}
+      {$this dx_generate_lines_info}
+      {$this dx_play_info}
+      {$this dx_play_set_count}
+      {$this dx_play_header}
+      {if {! $gotthislabelpreview}
+         {set $gotthislabelpreview {song_preview.lbl get_local_pos_index 2}}
+      }
+      {song_preview.lbl set_local_pos_index 2 {- $gotthislabelpreview 15}}
+   )
+   (update_tour_setlist_label
+      ($filter $song_count)
+      {setlist_label.grp set showing TRUE}
+      {if_else
+         {== $song_count 1}
+         {setlist_title.lbl set_token_fmt set_list_tour_title_singular $filter}
+         {setlist_title.lbl set_token_fmt set_list_tour_title $filter $song_count}})
+   (update_partyshuffle_setlist_label
+      ($song_count)
+      {setlist_label.grp set showing TRUE}
+      {if_else
+         {== $song_count 1}
+         {setlist_title.lbl set text_token set_list_partyshuffle_title_singular}
+         {setlist_title.lbl set_token_fmt set_list_partyshuffle_title $song_count}})
+   (update_named_setlist_label
+      ($setlist $song_count)
+      {setlist_label.grp set showing TRUE}
+      {if_else
+         {== $song_count 1}
+         {setlist_title.lbl set_token_fmt set_list_named_title_singular $setlist}
+         {setlist_title.lbl set_token_fmt set_list_named_title $setlist $song_count}})
+   (update_setlist_label
+      ($song_count)
+      {if_else
+         {== $song_count 1}
+         {setlist_label.grp set showing FALSE}
+         {do
+            {setlist_label.grp set showing TRUE}
+            {setlist_title.lbl set_token_fmt set_list_title $song_count}}})
+   (update_icon_art
+      ($icon_art)
+      {marquee.grp set_showing TRUE}
+      {career.pic set tex_file "dx/custom_textures/_additional_textures/acc_dx_hourglass_keep.png"}
+      {if_else
+         {!
+            {==
+               $icon_art
+               ""}}
+         {album_art.pic set tex_file $icon_art}
+         {album_art.pic
+            set
+            tex_file
+            "ui/image/blank_album_art_keep.png"}})
+   (update_preview_song
+      ($song $album_art $index)
+      {marquee.grp set_showing TRUE}
+      {coming_up.lbl set text_token coming_up}
+      {song_preview.lbl set_song_and_artist_name_from_sym $song $index}
+      {career.pic set tex_file "dx/custom_textures/_additional_textures/acc_dx_hourglass_keep.png"}
+      {if_else
+         {!
+            {==
+               $album_art
+               ""}}
+         {album_art.pic set tex_file $album_art}
+         {album_art.pic
+            set
+            tex_file
+            "ui/image/blank_album_art_keep.png"}})
+   (update_auto_vocals_label
+      ($num_players $auto_vocals_enabled $is_local)
+      {7_player.grp set_showing FALSE}
+   )
+}
+{new
+   BandScreen
+   dx_play_a_show_screen
+   (panels meta sv2_panel dx_play_a_show_panel song_select_panel)
+   (focus song_select_panel)
+   (enter
+      {song_select_panel set_showing FALSE}
+      {overshell add_sink $this}
+      {set $playintrotext TRUE}
+      {if
+         {session_mgr is_leader_local}
+         {overshell set_song_options_required FALSE}
+         {if
+            {overshell in_override_flow kOverrideFlow_None}
+            {overshell begin_override_flow kOverrideFlow_SongSettings}}}
+      {dx_play_a_show_panel dx_play_countdown}
+      {dx_play_a_show_panel hold_up}
+      {{dx_play_a_show_panel find song_preview.lbl} set_token_fmt dx_play_a_show_welcome}
+      {play_header.lbl set text_token {sprint " "}}
+      {set $poopie ()}
+      {resize $poopie 0}
+   )
+   (exit
+      {overshell remove_sink $this}
+      {if
+         {overshell in_override_flow kOverrideFlow_SongSettings}
+         {overshell end_override_flow kOverrideFlow_SongSettings TRUE}})
+   (override_ended
+      ($override_type $cancel)
+      {cond
+         ({&&
+               {== $override_type kOverrideFlow_RegisterOnline}
+               {is_leader_local}}
+            {overshell leave_options}
+            {overshell begin_override_flow kOverrideFlow_SongSettings})
+         ({&&
+               {== $override_type kOverrideFlow_SongSettings}
+               {is_leader_local}}
+            {if_else
+               $cancel
+               {do
+                  {cond
+                     ({gamemode in_mode qp_coop}
+                        {if_else {session is_local}
+                           {ui goto_screen song_select_screen 0}
+                           {ui sync_screen song_select_screen 0}
+                        }
+                     )
+                     {if_else {session is_local}
+                        {ui goto_screen main_hub_screen 0}
+                        {ui sync_screen main_hub_screen 0}
+                     }
+                  }
+               }
+               {dx_play_a_show_panel dx_play_a_show_recieve_song}
+            }
+         )
+      }
+   )
+}
+{new
    BandScreen
    part_difficulty_screen
-   (panels meta DX_SV4_PANEL part_difficulty_panel)
+   (panels meta #ifdef HX_WII sv4_panel #else DX_SV4_PANEL #endif part_difficulty_panel)
    (enter
       {overshell add_sink $this}
       {if
@@ -149,50 +324,74 @@
                {do
                   {cond
                      ({gamemode in_mode tour}
+                        {if_else {session is_local}
                         {ui
-                           go_back_screen
+                           goto_screen
                            {get_tour_screen}
-                           ""})
+                           0}
+                        {ui sync_screen {get_tour_screen} 0}})
                      ({gamemode in_mode trainer}
+                        {if_else {session is_local}
                         {ui
-                           go_back_screen
+                           goto_screen
                            {training_mgr get_return_screen}
-                           ""})
+                           0}
+                        {ui sync_screen {training_mgr get_return_screen} 0}})
                      ({gamemode in_mode qp_coop}
+                        {if_else {session is_local}
                         {ui
-                           go_back_screen
+                           goto_screen
                            song_select_screen
-                           ""})
+                           0}
+                        {ui sync_screen song_select_screen 0}})
                      ({gamemode in_mode qp_practice}
+                        {if_else {session is_local}
                         {ui
-                           go_back_screen
+                           goto_screen
                            song_select_screen
-                           ""})
+                           0}
+                        {ui sync_screen song_select_screen 0}})
                      ({gamemode in_mode practice}
+                        {if_else {session is_local}
                         {ui
-                           go_back_screen
+                           goto_screen
                            song_select_screen
-                           ""})
+                           0}
+                        {ui sync_screen song_select_screen 0}})
                      ({gamemode in_mode party_shuffle}
+                        {if_else {session is_local}
                         {ui
-                           go_back_screen
+                           goto_screen
                            main_hub_screen
-                           ""})
+                           0}
+                        {ui sync_screen main_hub_screen 0}})
                      ({gamemode in_mode campaign}
                         {if_else
                            {campaign get_was_launched_into_musiclibrary}
-                           {ui
-                              go_back_screen
-                              song_select_screen
-                              ""}
-                           {ui
-                              go_back_screen
-                              accomplishment_screen
-                              ""}})
+                           {do
+                              {if_else {session is_local}
+                              {ui
+                                 goto_screen
+                                 song_select_screen
+                                 0}
+                              {ui sync_screen song_select_screen 0}}
+                           }
+                           {do
+                              {if_else {session is_local}
+                              {ui
+                                 goto_screen
+                                 accomplishment_screen
+                                 0}
+                              {ui sync_screen accomplishment_screen 0}}
+                           }
+                        }
+                     )
+                     {if_else {session is_local}
                      {ui
-                        go_back_screen
+                        goto_screen
                         main_hub_screen
-                        ""}}
+                        0}
+                     {ui sync_screen main_hub_screen 0}}}
                   {meta_performer clear_venues}}
                {cond
                   ({gamemode in_mode practice}

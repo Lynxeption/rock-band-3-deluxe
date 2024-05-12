@@ -1,3 +1,4 @@
+#include ../../dx/ui/main/dx_main_handles.dta
 {new
    MainHubPanel
    main_hub_panel
@@ -26,9 +27,10 @@
          {&&
             $messages_received
             {$this check_profile_for_message_ticker}
-            {!=
-               {$this get_dlcmotd}
-               ""}}
+            #ifndef HX_WII
+            {!= {$this get_dlcmotd} ""}
+            #endif
+         }
          {push_back $messages dlc_motd}}
       {if
          {&&
@@ -71,32 +73,8 @@
       {$this get_dlcmotd})
    (is_loaded
       {saveload_mgr is_initial_load_done})
+   DX_MAIN_HANDLES
    (enter
-      DX_SET_SERVER_LOCALE ; dx - change button and label text when connected to ashcentral
-      {dx_presence_manager}
-      {dx_sv_menu_logo_set sv3_panel}
-      {set $dx_random_number {random_int 0 4096}}
-      {if {== $dx_random_number 2112}
-         {dx_passive_messenger you_lost}
-      }
-      {do
-         ($year $month $day $hour $minute $second)
-         {get_date_time $year $month $day $hour $minute $second}
-         {if
-            {&&
-               {! $dx_msg_birth}
-               ;{> $year 2023}
-               {== $month 10}
-               {== $day 25}
-            }
-            {set $dx_msg_birth TRUE}
-            {dx_passive_messenger_symbol "Happy Birthday Shiloh!"}
-         }
-      }
-      #ifndef STORE_ENABLED
-      {$this disable mb_musicstore.btn}
-      {mb_musicstore.btn set_showing FALSE}
-      #endif
       {if
          [first_user]
          {profile_mgr
@@ -106,6 +84,26 @@
             set
             first_user
             ""}}
+      #ifdef HX_WII
+      {if
+         {platform_mgr is_online_restricted}
+         {do
+            {qp_fmp.btn set_state 2}
+            {tour_fmp.btn set_state 2}
+            {career_leaderboard.btn set_state 2}
+            {redeem_token.btn set_state 2}}}
+      {unless
+         {session_mgr is_local}
+         {mb_shop.btn set_state 2}}
+      {session
+         add_sink
+         $this
+         (new_remote_user)}
+      {session
+         add_sink
+         $this
+         (remote_user_left)}
+      #endif
       {unless
          {ui_event_mgr has_transition_event go_to_charactercreator}
          {input_mgr clear_user}
@@ -127,15 +125,14 @@
       {input_mgr check_trigger_auto_vocals_confirm}
       {overshell set_allow_real_guitar_flow TRUE}
       {overshell update_all}
-      #ifdef HX_XBOX
-      {content_mgr start_refresh}
-      #endif
-      {if {|| {! $screensaver} {! $gotcha} {modifier_mgr is_modifier_active mod_auto_play}}
-         DX_MAIN_BUTTON_DISABLER
-      }
+      {$this dx_main_on_enter}
       {campaign clear_current_goal})
    (exit
-      {platform_mgr remove_sink $this})
+      {platform_mgr remove_sink $this}
+      #ifdef HX_WII
+      {session remove_sink $this new_remote_user}
+      {session remove_sink $this remote_user_left}
+      #endif)
    (SELECT_MSG
       {switch
          $component
@@ -166,28 +163,7 @@
                {$user is_char_customizable}
                {do
                   {critical_user_listener set_critical_user $user}
-                  {switch {{$player get_user} get_slot_num}
-                     (0
-                        {main_hub_panel unlock_gamestop_award 0}
-                        {main_hub_panel unlock_x79_award 0}
-                        {main_hub_panel unlock_d2010_award 0}
-                     )
-                     (1
-                        {main_hub_panel unlock_gamestop_award 1}
-                        {main_hub_panel unlock_x79_award 1}
-                        {main_hub_panel unlock_d2010_award 1}
-                     )
-                     (2
-                        {main_hub_panel unlock_gamestop_award 2}
-                        {main_hub_panel unlock_x79_award 2}
-                        {main_hub_panel unlock_d2010_award 2}
-                     )
-                     (3
-                        {main_hub_panel unlock_gamestop_award 3}
-                        {main_hub_panel unlock_x79_award 3}
-                        {main_hub_panel unlock_d2010_award 3}
-                     )
-                  }
+                  {$this dx_unlock_pre_orders}
                   {closet_mgr set_user $user}
                   {ui goto_screen customize_clothing_enter_screen}}
                {do
@@ -232,7 +208,9 @@
                            {ui push_screen create_character_maxed_screen}}}
                      {ui push_screen create_character_notonline_screen}}}})
          (mb_musicstore.btn
-            {$this set_state kMainHubState_Store})
+            {input_mgr set_user $user}
+            {set $stored_user $user}
+            {$this dx_play_a_show})
          (pn_quickplay.btn
             {$this set_state kMainHubState_Quickplay})
          (pn_tour.btn
@@ -343,15 +321,18 @@
                   {training_mgr set_return_info main_hub_screen overshell_quit_freestyle}
                   {ui goto_screen drum_freestyle_screen})
                {push_basic_confirm_dialog drum_freestyle_wrong_controller}})
-         ((dlc_store.btn redeem_token.btn)
+         ((dlc_store.btn redeem_token.btn wii_manageAOC.btn)
             {store_real_loading_screen
                set
                store_mode
                {switch
                   $component
                   (dlc_store.btn dlc)
-                  (redeem_token.btn token)}}
+                  (redeem_token.btn token)
+                  (wii_manageAOC.btn manage)}}
+            #ifndef HX_WII
             {input_mgr set_user $user}
+            #endif
             #ifdef HX_XBOX
             {if_else
                {'||'
@@ -376,6 +357,10 @@
             #endif
             #ifdef HX_PC
             {ui goto_screen store_loading_screen}
+            #endif
+            #ifdef HX_WII
+            {$this set_state kMainHubState_Main}
+            {ui goto_screen store_wii_enter_screen}
             #endif)})
    (handle_goto_tour
       {net_sync set_ui_state kNetUI_WaitingTour}
@@ -550,7 +535,10 @@
             {$this cycle_next_message})
          ({== $action kAction_ViewModify}
             {profile_mgr set_primary_profile_by_user $user}
-             DX_BOOT_FILE_CHECKER)
+             #ifndef HX_WII
+             {$this dx_check_dx}
+             {$this dx_check_xeniawrites}
+             #endif)
          kDataUnhandled})
    (refresh_message_provider
       {message_area.lst
@@ -689,6 +677,7 @@
    (net_start_utility_finished
       ($success)
       {cond
+         #ifndef HX_WII
          ([waiting_for_store_entry]
             {if
                $success
@@ -703,6 +692,7 @@
             {set
                [waiting_for_token_entry]
                FALSE})
+         #endif
          ([waiting_for_leaderboard_entry]
             {if
                $success
@@ -728,7 +718,10 @@
                   add_award
                   award_gamestop
                   campaign_award_reason_preorder}
-             DX_BOOT_FILE_CHECKER}}})
+             #ifndef HX_WII
+             {$this dx_check_dx}
+             {$this dx_check_xeniawrites}
+             #endif}}})
    (unlock_x79_award
       ($pad_num)
       {if
@@ -745,7 +738,10 @@
                   add_award
                   award_bonus_x79
                   campaign_award_reason_preorder}
-             DX_BOOT_FILE_CHECKER}}})
+             #ifndef HX_WII
+             {$this dx_check_dx}
+             {$this dx_check_xeniawrites}
+             #endif}}})
    (unlock_d2010_award
       ($pad_num)
       {if
@@ -762,7 +758,10 @@
                   add_award
                   award_bonus_d2010
                   campaign_award_reason_preorder}
-             DX_BOOT_FILE_CHECKER}}})
+             #ifndef HX_WII
+             {$this dx_check_dx}
+             {$this dx_check_xeniawrites}
+             #endif}}})
    (check_rewards_and_hints
       {if
          {session_mgr is_local}
@@ -774,9 +773,11 @@
                {meta_performer are_credits_pending}}
             {ui goto_screen meta_loading_main_screen}
             {show_hint hint_rb3_welcome_screen}}})
-   DX_BOOT_FILE_HANDLERS
    (TRANSITION_COMPLETE_MSG
-      DX_BOOT_FILE_CHECKER
+      #ifndef HX_WII
+      {$this dx_check_dx}
+      {$this dx_check_xeniawrites}
+      #endif
       DX_AUTOSAVE)
    (update_finding_help
       {finding_continue.ihp
@@ -796,11 +797,30 @@
             {waiting_on_leader.lbl
                set_token_fmt
                main_menu_waiting_on_leader
-               {$leader_user get_player_name}}}})}
+               {$leader_user get_player_name}}}})
+   #ifdef HX_WII
+   (new_remote_user
+      {if
+         {==
+            {$this get_state}
+            kMainHubState_Customize}
+         {do
+            {$this set_focus mb_playnow.btn}
+            {$this set_state kMainHubState_Main}
+            {play_instr_sfx $user button_back}}}
+      {unless
+         {session_mgr is_local}
+         {mb_shop.btn set_state 2}})
+   (remote_user_left
+      {if
+         {session_mgr is_local}
+         {do
+            {mb_shop.btn set_state 0}}})
+   #endif}
 {new
    BandScreen
    main_hub_screen
-   (panels meta sv3_panel main_hub_panel accomplishments_status_panel)
+   (panels meta #ifdef HX_WII sv3_panel #else {if_else {file_exists DX_MENU_BACKGROUND_BIK_PATH} song_movie_panel sv3_panel} #endif main_hub_panel accomplishments_status_panel)
    (enter
       {accomplishments_status_panel set_showing $overshell_showing} ; dx - hide ui elements if in screensaver
       {main_hub_panel set_showing $overshell_showing}
@@ -857,12 +877,24 @@
    disconnect_find_players_confirm_screen
    (panels dialog_panel)
    (focus dialog_panel)
+   (former_net_ui_state 0)
    (enter
+      #ifdef HX_WII
+      {set
+         [former_net_ui_state]
+         {net_sync get_ui_state}}
+      {net_sync set_ui_state kNetUI_InDialog}
+      #endif
       {dialog_panel set_yesno disconnect_find_players_confirm no.btn})
    (SELECT_MSG
       {if
          {== $component yes.btn}
          {main_hub_screen cancel_find_override}}
+      #ifdef HX_WII
+      {net_sync
+         set_ui_state
+         [former_net_ui_state]}
+      #endif
       {ui pop_screen main_hub_screen})}
 {new
    BandScreen
@@ -900,6 +932,9 @@
             {closet_mgr set_user $user}
             {closet_mgr set_return_screen main_hub_screen}
             {net_sync disable}
+            #ifdef HX_WII
+            {overshell set_active_status kOvershellInactive}
+            #endif
             {ui pop_screen charactercreator_screen})
          (opt2.btn
             {input_mgr clear_user}
@@ -929,7 +964,11 @@
    (SELECT_MSG
       {cond
          ({== $component opt1.btn}
+            #ifdef HX_WII
+            {platform_mgr signin 1 FALSE $user}
+            #else
             {platform_mgr signin 1 FALSE}
+            #endif
             {ui pop_screen})
          ({== $component opt2.btn}
             {ui pop_screen})})}

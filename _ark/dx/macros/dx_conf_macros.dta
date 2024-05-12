@@ -1,3 +1,7 @@
+#define DX_TITLE_ID
+(#ifdef REGION_EUROPE "BLES00986" #else "BLUS30463" #endif)
+#define DX_HI_MEM_PATH
+(#ifdef REGION_EUROPE "GD:/dev_hdd0/game/BLES00986/USRDIR/dx_high_memory.dta" #else "GD:/dev_hdd0/game/BLUS30463/USRDIR/dx_high_memory.dta" #endif)
 #define BLACK_VENUE
 (none)
 #define SMALL_CLUB_01
@@ -127,11 +131,13 @@
       }
       {do
          {dx_log_writer default {sprint "Auto Play/Kick detected. Disconnecting from session. Current Screen: " {ui current_screen} " - Gamemode: " $dx_gamemode}}
-         {session send_msg_to_all {'`' (ui goto_screen meta_loading_main_screen) kNetReliable}}
-         {session send_msg_to_all {'`' (session disconnect) kNetReliable}}
-         {session send_msg_to_all {'`' (session_mgr disconnect) kNetReliable}}
-         {session disconnect}
-         {session_mgr disconnect}
+         {unless {session_mgr is_local}
+            {session send_msg_to_all {'`' (ui goto_screen meta_loading_main_screen) kNetReliable}}
+            {session send_msg_to_all {'`' (session disconnect) kNetReliable}}
+            {session send_msg_to_all {'`' (session_mgr disconnect) kNetReliable}}
+            {session disconnect}
+            {session_mgr disconnect}
+         }
       }
    }
 )
@@ -158,6 +164,41 @@
    (kFilterSource ugc2)
    (kFilterSource ugc_plus)
 )
+
+#define DX_GOAL_CATA
+(
+   (acc_cat_guitar_dx
+      (group acc_grp_guitar))
+   (acc_cat_bass_dx
+      (group acc_grp_bass))
+   (acc_cat_band_trackpack
+      (group acc_grp_band))
+   (acc_cat_band_dx
+      (group acc_grp_band))
+   (acc_cat_vox_dx
+      (group acc_grp_vox))
+   (acc_cat_prodrums_dx
+      (group acc_grp_prodrums))
+   (acc_cat_prokeys_dx
+      (group acc_grp_prokeys))
+   (acc_cat_drums_dx
+      (group acc_grp_drums))
+   (acc_cat_harmonyvox_dx
+      (group acc_grp_harmonyvox))
+)  
+#define DX_GOAL_SONG_RBTPV1
+(allthesmallthings buddyholly callingdrlove crushcrushcrush dieallright gimmethreesteps interstatelovesong jokerandthe littlesister liveforever marchofthepigs moonagedaydream morethanafeeling movealong siva synchronicity2 teenagelobotomy thekill truckin wecarealot)
+
+#define DX_GOAL_SONG_RBCTPV2
+(thatshowcountryboysroll singlewhitefemale alright awfulbeautifullife sideways intentionalheartache manofme twang crazytown ringoffire2 backwoods kissagirl perfectday giddyonup rainisagoodthing mamatried summernights thenightthelightswentout parrtyfortwo settlin rideadkins)
+
+#define DX_GOAL_SONG_4KINGSOFMETAL
+(ridethelightning blackened andjusticeforall battery sleepwalker wakeupdead theconjuring peacesells devilsisland goodmorningblackfriday badomen iaintsuperstitious mylastwords holywars hangar18 takenoprisoners fivemagics poisonwasthecure lucretia tornadoofsouls dawnpatrol rustinpeace symphonyofdestruction atoutlemonde publicenemyno1 amongtheliving imtheman indians madhouselive metalthrashingmadlive caughtinamosh blackmagic rainingblood southofheaven seasonsintheabyss)
+#define DX_SET_RB1
+(sayitaintso inbloom ithinkimparanoid missqueen hereitgoesagain 29fingers creep waveofmutilation maps seven gimmeshelter sabotage blitzkriegbop celebrityskin whenyouwereyoung timewehad imsosick blackholesun blooddoll wanteddeadoralive daylatedollarshort nightmare orangecrush mainoffender thehandthatfeeds epic suffragettecity ballroomblitz deadonarrival trainkeptarollin areyougonnabemygirl pleasure brainpower cantletgo gowiththeflow danicalifornia igetby outside electricversion vasoline timmy detroitrockcity cherubrock nexttoyou tomsawyer greengrass highwaystar wontgetfooled)
+#define DX_SET_RB2
+(iwaswrong sowhatchawant epro hungrylikethewolf pretendweredead rebelgirl nineintheafternoon drainyou pda coolforcats hellothere today thatswhatyouget spiritinthesky wegotthebeat newkidinschool feelthepain pumpitup onestepcloser welcometothe whitewedding psychokiller lump conventionallover deluxe shootingstar #ifndef HX_WII giveitaway2 #endif themiddle livinonaprayer onewayoranother ajaggedgorgeouswinter goyourownway kidsinamerica girlsnotgrey lazyeye comeoutandplay mountainsong wheredyougo alexchilton rocknme roundandround yououghtaknow alabamagetaway supremegirl pinballwizard ourtruth uncontrollableurge badreputation nightlies teenageriot shacklersrevenge letthereberock thetrees aqualung downwiththesickness everlong giveitall robtheprezodent #ifndef HX_WII spoonman2 #endif aceofspades almosteasy ramblinman getclean peacesells colonyofbirchmen soulsofblack bodhisattva shouldertotheplow battery panicattack)
+
 #define DX_ROLL_INTERVAL_COMMON
 (
    {if_else {modifier_mgr is_modifier_active mod_nolanes}
@@ -194,6 +235,12 @@
    (rb3dx_shellmusic_multi_inthemeantime 0.0)
    (rb3dx_shellmusic_multi_thekillingmoon 0.0)
    (rb3dx_shellmusic_multi_thisbastardslife 0.0)
+   (rb3dx_shellmusic_multi_misery 0.0)
+   (rb3dx_shellmusic_multi_getready2rokk 0.0)
+   (rb3dx_shellmusic_multi_parrtyintheusa 0.0)
+   (rb3dx_shellmusic_multi_rickroll 0.0)
+   (rb3dx_shellmusic_multi_bigenergy 0.0)
+   (rb3dx_shellmusic_multi_downwiththesickness 0.0)
    ;rb2
    (rb2_shellmusic_multi_aceofspades 0.0)
    (rb2_shellmusic_multi_badreputation 0.0)
@@ -207,20 +254,20 @@
    (rb2_shellmusic_multi_neighborhood 0.0)
    (rb2_shellmusic_multi_nightlies 0.0)
    (rb2_shellmusic_multi_shoulder 0.0)
-   ;rb1 (not remade yet)
-   (rb1_shellmusic_29fingers 0.0)
-   (rb1_shellmusic_blooddoll 0.0)
-   (rb1_shellmusic_cantletgo 0.0)
-   (rb1_shellmusic_daylate 0.0)
-   (rb1_shellmusic_imsosick 0.0)
-   (rb1_shellmusic_nightmare 0.0)
-   (rb1_shellmusic_pleasure 0.0)
-   (rb1_shellmusic_seven 0.0)
-   (rb1_shellmusic_epic 0.0)
-   (rb1_shellmusic_suffragette 0.0)
-   (rb1_shellmusic_thehandthatfeeds 0.0)
-   (rb1_shellmusic_gowiththeflow 0.0)
-   (rb1_shellmusic_missqueen 0.0)
+   ;rb1
+   (rb1_shellmusic_multi_29fingers 0.0)
+   (rb1_shellmusic_multi_blooddoll 0.0)
+   (rb1_shellmusic_multi_cantletgo 0.0)
+   (rb1_shellmusic_multi_daylate 0.0)
+   (rb1_shellmusic_multi_imsosick 0.0)
+   (rb1_shellmusic_multi_nightmare 0.0)
+   (rb1_shellmusic_multi_pleasure 0.0)
+   (rb1_shellmusic_multi_seven 0.0)
+   (rb1_shellmusic_multi_epic 0.0)
+   (rb1_shellmusic_multi_suffragettecity 0.0)
+   (rb1_shellmusic_multi_thehandthatfeeds 0.0)
+   (rb1_shellmusic_multi_gowiththeflow 0.0)
+   (rb1_shellmusic_multi_missqueen 0.0)
    ;lrb
    (lrb_shellmusic_multi_apunk 0.0)
    (lrb_shellmusic_multi_girlsandboys 0.0)
@@ -233,8 +280,11 @@
    (rb4_shellmusic_multi_dreamgenie 0.0)
    (rb4_shellmusic_multi_vbomb 0.0)
    (rb4_shellmusic_multi_lightupthenight 0.0)
+   (rb4_shellmusic_multi_rudeboys_voc 0.0)
    ;gdrb
-   (gdrb_shellmusic_medley 0.0)
+   ;fuck off and die do not use this
+   ;(gdrb_shellmusic_medley 0.0)
+   (gdrb_shellmusic_multi_welcometoparadise 0.0)
    ;easter egg
    (gh2dx_shellmusic_multi_psychobilly 0.0)
    ; :tim:

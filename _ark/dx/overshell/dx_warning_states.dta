@@ -13,7 +13,7 @@
       (on_cancel
          {$this show_state dxState_TextureMenu}))
 
-(kState_SettingsWarn
+(dxState_SettingsWarn
    (view confirm_action)
    (enter
       {handle
@@ -35,7 +35,7 @@
          (os_save
             {if_else $dx_settings_error
             {$this show_state dxState_SaveWarnError}
-            {do DX_SETTINGS_DTA_WRITER {$this show_game_options}}})
+            {do {dx_settings_dta_writer} {$this show_game_options}}})
          (os_dontsave
             {$this show_game_options})}))
 
@@ -54,7 +54,7 @@
                {if_else {== $dx_track_theme_name default}
                   {dx_passive_messenger os_dont_overwrite_default}
                   {do
-                     DX_TRACK_THEME_DTA_WRITER
+                     {dx_track_theme_dta_writer}
                      {$this show_state dxState_TrackThemeLoader}
                   }
                }
@@ -75,7 +75,7 @@
          (os_save
             {if_else $dx_settings_error
             {$this show_state dxState_ThemeSaveWarnError}
-            {do {set $dx_track_theme_name $text} DX_TRACK_THEME_DTA_WRITER {$this show_state dxState_TrackThemeLoader}}})
+            {do {set $dx_track_theme_name $text} {dx_track_theme_dta_writer} {$this show_state dxState_TrackThemeLoader}}})
          (os_dontsave
             {$this show_state dxState_AppearanceMenu})}))
 
@@ -115,7 +115,7 @@
          (overshell_continue
             {$this show_options_av_settings})}))
 
-(kState_SettingsSave
+(dxState_SettingsSave
    (view confirm_action)
    (enter
       {handle
@@ -125,7 +125,7 @@
    (on_cancel
       {$this show_state dxState_DeluxeSettings}))
 
-(kState_SettingsSaveError
+(dxState_SettingsSaveError
    (view confirm_action)
    (enter
       {handle
@@ -137,7 +137,7 @@
 
 ;modifier warnings
 
-(kState_AutoPlayWarn
+(dxState_AutoPlayWarn
    (view confirm_action)
    (enter
       {handle
@@ -149,13 +149,15 @@
             {set $gotcha FALSE}
             {saveload_mgr disable_autosave $user}
             {dx_passive_messenger saving_disabled}
+            {$this leave_options}
             {overshell update_all}
-            {ui goto_screen meta_loading_main_screen})}
-      {$this show_modifiers})
+            {ui goto_screen meta_loading_main_screen})
+         (overshell_cancel
+         {$this show_modifiers})})
    (on_cancel
       {$this show_modifiers}))
 
-(kState_PostFXWarn
+(dxState_PostFXWarn
    (view confirm_action)
    (enter
       {handle
@@ -177,7 +179,7 @@
    )
 )
 
-(kState_CustomizerWarn
+(dxState_CustomizerWarn
    (view confirm_action)
    (enter
       {handle
@@ -185,27 +187,48 @@
    (SELECT_MSG
       {switch {$component selected_sym}
          (overshell_continue
-            {ui_event_mgr trigger_event error_message
-               (dummy init {symbol "You are being taken to the in game Theme Customizer. In this mode you will be able to see your theme settings reflected in real time. You will not be able to play the game or leave until you specifically click 'Leave Customizer'. To begin, click continue and pause the game when the song has started."})
-            }
+            ;{ui_event_mgr trigger_event error_message
+            ;   (dummy init {symbol "You are being taken to the in game Theme Customizer. In this mode you will be able to see your theme settings reflected in real time. You will not be able to play the game or leave until you specifically click 'Leave Customizer'. To begin, click continue and pause the game when the song has started."})
+            ;}
             {set $dx_customizer TRUE}
             {set $dx_moved_once FALSE}
             {session disconnect}
             {session_mgr disconnect}
+            {$this leave_options}
             ;{overshell set_active_status kOvershellInactive}
-            {ui goto_screen song_select_enter_screen}
+            {set $rb3_songlist
+               (
+                  20thcenturyboy 25or6to4 antibodies beastandtheharlot beencaughtstealing
+                  beforeiforget bohemianrhapsody breakonthrough caughtinamosh centerfold
+                  chinagrove coldasice combatbaby crazytrain crosstowntraffic deadendfriends
+                  dontburyme dontstandsoclosetome duhast everybodywantstorule falsealarm flylikeaneagle
+                  foolin freebird getfree getupstandup goodvibrationslive heartofglass hereigoagain
+                  heymanniceshot humanoid icanseeformiles ifeelgoodalt iloverocknroll imagine inabigcountry
+                  ineedtoknow inthemeantime iwannabesedated jerrywasaracecar justlikeheaven killingloneliness
+                  kinggeorge lasso lastdance livinginamerica llama lowrider meenamora midlifecrisis
+                  miserybusiness2 needyoutonight nooneknows ohmygod onearmedscissors outerspacemuffs
+                  oyemiamor plush portionsforfoxes radarlove rainbowinthedark rehab rocklobster roundabout
+                  saturdaynightsalright sisterchristian smokeonthewater somethingbigger spaceoddity
+                  stopmeifyouthink thebeautifulpeople thecon thehardestbutton thekillingmoon thelook
+                  thepoweroflove thisbastardslife vivalaresistance walkinonthesun walkoflife
+                  werewolvesoflondon whipit yoshimibattles
+               )
+            }
+            {meta_performer set_song {random_elem $rb3_songlist}}
+            {gamemode set_mode qp_coop}
+            {ui sync_screen {music_library get_next_screen} 0}
          )
          (overshell_cancel
-            {$this show_state dxState_AppearanceMenu}
+            {$this show_state dxState_TextureMenu}
          )
       }
    )
    (on_cancel
-      {$this show_state dxState_AppearanceMenu}
+      {$this show_state dxState_TextureMenu}
    )
 )
 
-(kState_FakeJukeWarn
+(dxState_FakeJukeWarn
    (view confirm_action)
    (enter
       {handle
@@ -231,9 +254,11 @@
             {set $gotcha FALSE}
             {saveload_mgr disable_autosave $user}
             {dx_passive_messenger saving_disabled}
+            {$this leave_options}
             {overshell update_all}
-            {ui goto_screen meta_loading_main_screen})}
-      {$this show_modifiers})
+            {ui goto_screen meta_loading_main_screen})
+         (overshell_cancel
+         {$this show_modifiers})})
    (on_cancel
       {$this show_modifiers}))
 
@@ -245,7 +270,7 @@
    (SELECT_MSG
       {$this show_state kState_Modifiers}))
 
-(kState_CHModeWarn
+(dxState_CHModeWarn
    (view confirm_action)
    (enter
       {handle
@@ -262,14 +287,16 @@
                {modifier_mgr toggle_modifier_enabled mod_calibration}}
             {if {modifier_mgr is_modifier_active mod_precision}
                {modifier_mgr toggle_modifier_enabled mod_precision}}
+            {$this leave_options}
             {overshell update_all}
-            {ui goto_screen meta_loading_main_screen})}
-      {$this show_modifiers})
+            {ui goto_screen meta_loading_main_screen})
+         (overshell_cancel
+         {$this show_modifiers})})
    (on_cancel
       {$this show_modifiers}
    )
 )
-(kState_BrutalWarn
+(dxState_BrutalWarn
    (view confirm_action)
    (enter
       {handle
@@ -282,16 +309,18 @@
       {modifier_mgr toggle_modifier_enabled mod_brutalmode}
       {set $dx_stars_needs_reset TRUE}
       {set $dx_multiplier_ring_needs_reset TRUE}
+      {$this leave_options}
       {overshell update_all}
-      {ui goto_screen meta_loading_main_screen})}
-      {$this show_modifiers}
+      {ui goto_screen meta_loading_main_screen})
+      (overshell_cancel
+         {$this show_modifiers})}
    )
    (on_cancel
       {$this show_modifiers}
    )
 )
 
-(kState_CalibrationWarn
+(dxState_CalibrationWarn
    (view confirm_action)
    (enter
       {handle
@@ -306,16 +335,18 @@
          {modifier_mgr toggle_modifier_enabled mod_precision}}
       {if {modifier_mgr is_modifier_active mod_chmode}
          {modifier_mgr toggle_modifier_enabled mod_chmode}}
+      {$this leave_options}
       {overshell update_all}
-      {ui goto_screen meta_loading_main_screen})}
-      {$this show_modifiers}
+      {ui goto_screen meta_loading_main_screen})
+      (overshell_cancel
+         {$this show_modifiers})}
    )
    (on_cancel
       {$this show_modifiers}
    )
 )
 
-(kState_PrecisionWarn
+(dxState_PrecisionWarn
    (view confirm_action)
    (enter
       {handle
@@ -331,16 +362,18 @@
          {modifier_mgr toggle_modifier_enabled mod_calibration}}
       {if {modifier_mgr is_modifier_active mod_chmode}
          {modifier_mgr toggle_modifier_enabled mod_chmode}}
+      {$this leave_options}
       {overshell update_all}
-      {ui goto_screen meta_loading_main_screen})}
-      {$this show_modifiers}
+      {ui goto_screen meta_loading_main_screen})
+      (overshell_cancel
+         {$this show_modifiers})}
    )
    (on_cancel
       {$this show_modifiers}
    )
 )
 
-(kState_RebootWarn
+(dxState_RebootWarn
    (view confirm_action)
    (enter
       {handle
@@ -360,7 +393,7 @@
    )
 )
 
-(kState_DebugWarn
+(dxState_DebugWarn
    (view confirm_action)
    (enter
       {handle
@@ -370,21 +403,21 @@
    (SELECT_MSG
       {switch {$component selected_sym}
          (os_iunderstand
-            {$this show_state dxState_DebugSettings}
+            {$this show_state dxState_Debug}
             {set $dx_debug_first FALSE}
          )
          (os_takemeback
-            {$this show_state dxState_DeluxeSettings}
+            {$this show_state dxState_Advanced}
          )
       }
    ;   {$this show_modifiers}
    )
    (on_cancel
-      {$this show_state dxState_DeluxeSettings}
+      {$this show_state dxState_Advanced}
    )
 )
 
-(kState_ModifierSongLoad
+(dxState_ModifierSongLoad
    (view confirm_action)
    (enter
       {handle
@@ -431,31 +464,12 @@
          {set $dx_tracked_changed os_dx_himem_on}
          {set $in_state FALSE}
          {set $dx_write_hi_mem TRUE}
-         {$this show_state dxState_DebugSettings}
+         {$this show_state dxState_Debug}
       )
       (overshell_cancel
-         {$this show_state dxState_DebugSettings})})
+         {$this show_state dxState_Debug})})
       (on_cancel
-         {$this show_state dxState_DebugSettings}))
-
-(dxState_SwapGenderWarn
-   (view confirm_action)
-   (enter
-      {confirm_action.lst set_selected 1}
-      {handle
-         ($this set_confirm_actions swap_gender_warning (overshell_continue overshell_cancel))})
-   (SELECT_MSG
-      {switch {$component selected_sym}
-      (overshell_continue
-         {set $dx_tracked_changed os_dx_swap_gender_on}
-         {set $in_state FALSE}
-         {set $dx_write_swap_genders TRUE}
-         {$this show_state dxState_DebugSettings}
-      )
-      (overshell_cancel
-         {$this show_state dxState_DebugSettings})})
-      (on_cancel
-         {$this show_state dxState_DebugSettings}))
+         {$this show_state dxState_Debug}))
 
 (dxState_ShadingMenuWarning
    (view confirm_action)
@@ -464,5 +478,69 @@
          ($this set_confirm_message {sprintf {localize os_bgwarn}})})
    (SELECT_MSG
       {$this show_state dxState_ShadingMenu}
+   )
+)
+
+(dxState_GraphicsWarn
+   (view confirm_action)
+   (enter
+      {handle
+         ($this set_confirm_actions postfx_warning (overshell_continue overshell_cancel))})
+   (SELECT_MSG
+      {switch {$component selected_sym}
+         (overshell_continue
+            {overshell update_all}
+            {$this show_state dxState_Graphics}
+            {ui goto_screen meta_loading_main_screen}
+         )
+         (overshell_cancel
+            {$this show_state dxState_Graphics}
+         )
+      }
+   )
+   (on_cancel
+      {$this show_state dxState_Graphics}
+   )
+)
+(dxState_60FPSWarn
+   (view confirm_action)
+   (enter
+      {handle
+         ($this set_confirm_actions 60fps_warning (overshell_continue overshell_cancel))})
+   (SELECT_MSG
+      {switch {$component selected_sym}
+         (overshell_continue
+            {overshell update_all}
+            {$this show_state dxState_Graphics}
+            {ui goto_screen meta_loading_main_screen}
+         )
+         (overshell_cancel
+            {$this show_state dxState_Graphics}
+         )
+      }
+   )
+   (on_cancel
+      {$this show_state dxState_Graphics}
+   )
+)
+(dxState_HighLODWarn
+   (view confirm_action)
+   (enter
+      {handle
+         ($this set_confirm_actions highlod_warning (overshell_continue overshell_cancel))})
+   (SELECT_MSG
+      {switch {$component selected_sym}
+         (overshell_continue
+            {overshell update_all}
+            {$this show_state dxState_Graphics}
+            {ui goto_screen meta_loading_main_screen}
+         )
+         (overshell_cancel
+            {$this show_state dxState_Graphics}
+         )
+      }
+   )
+   (on_cancel
+      {$this show_state dxState_Graphics}
    )
 )

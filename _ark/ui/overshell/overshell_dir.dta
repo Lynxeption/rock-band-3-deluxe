@@ -256,12 +256,14 @@
                            {if_else $online_enabled
                               {switch $dx_connected_server
                                  (none {push_back $options overshell_online_options})
+                                 (gocentral {push_back $options go_overshell_online_options})
                                  (ashcentral {push_back $options ash_overshell_online_options})
                                  (live {push_back $options live_overshell_online_options})
                                  (liveless {push_back $options liveless_overshell_online_options})
                               }
                               {switch $dx_connected_server
                                  (none {push_back $options overshell_register_online})
+                                 (gocentral {push_back $options go_overshell_register_online})
                                  (ashcentral {push_back $options ash_overshell_register_online})
                                  (live {push_back $options live_overshell_register_online})
                                  (liveless {push_back $options liveless_overshell_register_online})
@@ -276,12 +278,14 @@
                      {if_else $online_enabled
                         {switch $dx_connected_server
                            (none {push_back $options overshell_online_options})
+                           (gocentral {push_back $options go_overshell_online_options})
                            (ashcentral {push_back $options ash_overshell_online_options})
                            (live {push_back $options live_overshell_online_options})
                            (liveless {push_back $options liveless_overshell_online_options})
                         }
                         {switch $dx_connected_server
                            (none {push_back $options overshell_register_online})
+                           (gocentral {push_back $options go_overshell_register_online})
                            (ashcentral {push_back $options ash_overshell_register_online})
                            (live {push_back $options live_overshell_register_online})
                            (liveless {push_back $options liveless_overshell_register_online})
@@ -307,12 +311,14 @@
                   {if_else $online_enabled
                      {switch $dx_connected_server
                         (none {push_back $options overshell_online_options})
+                        (gocentral {push_back $options go_overshell_online_options})
                         (ashcentral {push_back $options ash_overshell_online_options})
                         (live {push_back $options live_overshell_online_options})
                         (liveless {push_back $options liveless_overshell_online_options})
                      }
                      {switch $dx_connected_server
                         (none {push_back $options overshell_register_online})
+                        (gocentral {push_back $options go_overshell_register_online})
                         (ashcentral {push_back $options ash_overshell_register_online})
                         (live {push_back $options live_overshell_register_online})
                         (liveless {push_back $options liveless_overshell_register_online})
@@ -322,7 +328,11 @@
                {if {modifier_mgr is_modifier_active mod_auto_play}
                   {push_back $options overshell_dx_bot_settings} ; dx - show autoplay settings when active
                }
-               {unless {session_mgr is_local}
+               {set $dx_users 0}
+               {user_mgr foreach_user $user
+                  {set $dx_users {+ $dx_users 1}}
+               }
+               {if {&& {! {session_mgr is_local}} {> $dx_users 1}}
                   {push_back $options overshell_dx_quick_chat} ; dx - show quick chat menu when online
                }
                {push_back $options overshell_change_character}
@@ -364,6 +374,7 @@
                   {&& $online_options $online_enabled}
                      {switch $dx_connected_server
                         (none {push_back $options overshell_online_options})
+                        (gocentral {push_back $options go_overshell_online_options})
                         (ashcentral {push_back $options ash_overshell_online_options})
                         (live {push_back $options live_overshell_online_options})
                         (liveless {push_back $options liveless_overshell_online_options})
@@ -435,9 +446,11 @@
                (ps3
                   {ps3.trg trigger})
                (wii
-                  {wii.trg trigger})})
+                  {wii.trg trigger})}
+            {{$this find platform_color.mat} set color {pack_color $dx_menu_color_r $dx_menu_color_g $dx_menu_color_b}})
          (show_view
             ($view $in_track_mode $default_option $default_option_index)
+            {{$this find platform_color.mat} set color {pack_color $dx_menu_color_r $dx_menu_color_g $dx_menu_color_b}}
             {do
                ($trigger
                   {sprint
@@ -474,7 +487,8 @@
                {if
                   $in_track_mode
                   {track_mode.trg trigger}
-                  {$this refresh_list_types_in_nav_chain $initial_focus $in_track_mode}}})
+                  {$this refresh_list_types_in_nav_chain $initial_focus $in_track_mode}}}
+               {{$this find platform_color.mat} set color {pack_color $dx_menu_color_r $dx_menu_color_g $dx_menu_color_b}})
          (refresh_list_types_in_nav_chain
             ($list $in_track_mode)
             {if
@@ -552,10 +566,11 @@
             {mic_arrows.grp
                set_showing
                {== $controller_type kControllerVocals}}
+            {if {! $dx_in_show_flow}
             {if_else
                {== $controller_type kControllerVocals}
                {difficulty_pos_vocals.trg trigger}
-               {difficulty_pos_non_vocals.trg trigger}})
+               {difficulty_pos_non_vocals.trg trigger}}})
          (update_sign_in_continue
             ($can_continue)
             {if_else
@@ -590,8 +605,10 @@
                {do
                   {options.lst enable_data overshell_online_options}
                   {options.lst enable_data overshell_register_online}
-               	{options.lst enable_data ash_overshell_online_options}
-               	{options.lst enable_data ash_overshell_register_online}
+                  {options.lst enable_data go_overshell_online_options}
+                  {options.lst enable_data ash_overshell_online_options}
+                  {options.lst enable_data go_overshell_register_online}
+                  {options.lst enable_data ash_overshell_register_online}
                   {options.lst enable_data live_overshell_online_options}
                   {options.lst enable_data live_overshell_register_online}
                   {options.lst enable_data liveless_overshell_online_options}
@@ -599,8 +616,10 @@
                {do
                	{options.lst disable_data overshell_online_options}
                   {options.lst disable_data overshell_register_online}
+                  {options.lst disable_data go_overshell_online_options}
                   {options.lst disable_data ash_overshell_online_options}
-               	{options.lst disable_data ash_overshell_register_online}
+                  {options.lst disable_data go_overshell_register_online}
+                  {options.lst disable_data ash_overshell_register_online}
                   {options.lst disable_data live_overshell_online_options}
                   {options.lst disable_data live_overshell_register_online}
                   {options.lst disable_data liveless_overshell_online_options}
@@ -647,7 +666,21 @@
             {button_pulse_unjoined.trig trigger})
          (update_user_name
             ($user)
-            {user_name.lbl set_user_name $user})
+            #ifdef HX_PS3
+            {set $dx_current_player_name {$user get_user_name}}
+            {search_replace $dx_current_player_name " (1)" "" $dx_current_player_name}
+            {search_replace $dx_current_player_name " (2)" "" $dx_current_player_name}
+            {search_replace $dx_current_player_name " (3)" "" $dx_current_player_name}
+            {search_replace $dx_current_player_name " (4)" "" $dx_current_player_name}
+            {search_replace $dx_current_player_name " (5)" "" $dx_current_player_name}
+            {search_replace $dx_current_player_name " (6)" "" $dx_current_player_name}
+            {search_replace $dx_current_player_name " (7)" "" $dx_current_player_name}
+            {search_replace $dx_current_player_name "*" "" $dx_current_player_name}
+            {set $dx_current_player_name_sanitized $dx_current_player_name}
+            {user_name.lbl set_token_fmt {sprint $dx_current_player_name_sanitized}}
+            #else
+            {user_name.lbl set_user_name $user}
+            #endif)
          (update_char_provider
             ($provider)
             {chars.lst refresh})
@@ -689,9 +722,9 @@
             {choose_part.lst set_provider $provider})
          (update_song_difficulty_ranking
             ($has_random_setlist $has_part $has_multiple_songs $difficulty $num_vocal_parts $track_sym)
-            {song_difficulty_ranking.idd set_showing TRUE}
+            {song_difficulty_ranking.idd set_showing {! $dx_in_show_flow}}
             {song_difficulty_ranking.idd set_values $track_sym $difficulty $num_vocal_parts $has_part}
-            {song_difficulty.lbl set_showing TRUE}
+            {song_difficulty.lbl set_showing {! $dx_in_show_flow}}
             {if_else
                $has_multiple_songs
                {song_difficulty.lbl set text_token overshell_setlist_difficulty}
@@ -747,7 +780,11 @@
                {if
                   $restart
                   {push_back $options overshell_restart}}
-               {unless {session_mgr is_local}
+               {set $dx_users 0}
+               {user_mgr foreach_user $user
+                  {set $dx_users {+ $dx_users 1}}
+               }
+               {if {&& {! {session_mgr is_local}} {> $dx_users 1}}
                   {push_back $options overshell_dx_quick_chat} ; dx - show quick chat menu when online
                }
                {if_else
@@ -769,16 +806,16 @@
                   {push_back $options overshell_choose_part}
                }
                {push_back $options overshell_game_options}
-               {if_else
-                  $can_skip
+               {if_else $can_skip
                   {do
-                     ($quit_options
-                        {array 0})
+                     ($quit_options {array 0})
                      {push_back $quit_options overshell_skip_song}
                      {push_back $quit_options $quit_token}
                      {options_end_game.lst set_data $quit_options}
-                     {push_back $options overshell_end_game}}
-                  {push_back $options $quit_token}}
+                     {push_back $options overshell_end_game}
+                  }
+                  {push_back $options $quit_token}
+               }
                {unless
                   $practice
                   {push_back $options overshell_leave}}
@@ -907,6 +944,7 @@
             {if $success
                {switch $dx_connected_server ; dx - changes the message when linking account based on the connected server
                   (none {linking_code_success.lbl set_token_fmt linking_code_success {$profile get_name}})
+                  (gocentral {linking_code_success.lbl set_token_fmt go_linking_code_success {$profile get_name}})
                   (ashcentral {linking_code_success.lbl set_token_fmt ash_linking_code_success {$profile get_name}})
                   (live {linking_code_success.lbl set_token_fmt linking_code_success {$profile get_name}})
                   (liveless {linking_code_success.lbl set_token_fmt linking_code_success {$profile get_name}})

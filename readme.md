@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="dependencies/images/header.gif" width="100%" alt="Header GIF">
+<img src="dependencies/media/header.gif" width="100%" alt="Header GIF">
 
 # Downloads and install instructions have been moved to our [brand new website](https://rb3dx.neocities.org/)!
 
@@ -26,7 +26,7 @@
 * Head to the [**Python downloads**](https://www.python.org/downloads/), download and install Python (version 3.11 or later).
   * ***Select "Add python.exe to PATH"*** on the installer.
 
-![Python PATH](dependencies/images/pythonpath.png)
+![Python PATH](dependencies/media/pythonpath.png)
 
 ### Initializing the Repo
 
@@ -37,7 +37,7 @@
 
 ### ***The folder should look something like this once it's done:***
 
-![Repo Folder](dependencies/images/repofolder.png)
+![Repo Folder](dependencies/media/repofolder.png)
 
 ### ✅ ***The Rock Band 3 Deluxe repo is now set up!***
 
@@ -87,3 +87,5 @@ From here, you can make any personal modifications to the game or build it yours
 [swap_rb_art_bytes.py](https://github.com/PikminGuts92/re-notes/blob/master/scripts/swap_rb_art_bytes.py) - Python script for converting Xbox images to PS3
 
 [dtab](https://github.com/mtolly/dtab) - For serializing `.dtb` script files
+
+[RB3DXBuildPkgPS3](https://github.com/InvoxiPlayGames/RB3DXBuildPkgPS3) - For building an RB3DX PKG for PS3

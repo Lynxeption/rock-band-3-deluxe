@@ -22,14 +22,16 @@
                      {fade.anim animate}})))
          (enter
             {$this dx_set_mtv_pos} ;set the custom position of the mtv_overlay on enter
-            {set $dx_mtvup TRUE}
+            {set $dx_mtvup TRUE} ;some code crashes when ran and mtv is not available
             {if
                {exists game}
                {game
                   add_sink
                   $this
                   (intro_end)}
-               {$this setup_text}
+               {unless {gamemode in_mode trainer}
+                  {$this setup_text}
+               }
                {if
                   {exists fade.anim}
                   {fade.anim set_frame {if_else {== $dx_song_title always} 50 0}} ; dx - if song title always is enabled set the current frame of the fade animation to fully visible
@@ -61,6 +63,7 @@
                      (always {fade.anim set_frame 50})
                      (never {fade.anim set_frame 0})
                      (default {fade.anim animate})
+                     (delayed {fade.anim animate})
                   }
                }
             }
@@ -72,7 +75,14 @@
                ($song_title
                   {{song_mgr get_meta_data {meta_performer song}} title}
                )
-               MTV_WRITER_CHOOSER ; dx - this is where we run mtv overlay setupE
+               #ifdef HX_WII
+               MTV_WRITER_NO_AUTHOR_FINDER
+               #else
+               {if_else $dx_ps3hw
+                  MTV_WRITER_NO_AUTHOR_FINDER
+                  MTV_WRITER_CHOOSER ; dx - this is where we run mtv overlay setup
+               }
+               #endif
             }
          )
       )

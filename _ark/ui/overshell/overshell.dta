@@ -20,25 +20,23 @@
       (type
          (state_handlers
             #include slot_states.dta
-            #include ../../dx/overshell/dx_warning_states.dta
-            #include ../../dx/overshell/dx_log_states.dta
-            #include ../../dx/overshell/dx_states.dta
-            #include ../../dx/overshell/dx_texture_states.dta
-            #include ../../dx/overshell/dx_appearance_states.dta
-            #include ../../dx/overshell/dx_cam_states.dta
-            #include ../../dx/overshell/dx_color_states.dta
+            #include ../../dx/overshell/dx_main_states.dta
             #include ../../dx/overshell/dx_speed_states.dta
-            #include ../../dx/overshell/dx_sfx_states.dta
+            #include ../../dx/overshell/dx_venue_states.dta
             #include ../../dx/overshell/dx_track_theme_states.dta
+            #include ../../dx/overshell/dx_texture_states.dta
+            #include ../../dx/overshell/dx_color_states.dta
+            #include ../../dx/overshell/dx_advanced_states.dta
+            #include ../../dx/overshell/dx_hud_states.dta
             #include ../../dx/overshell/dx_controller_states.dta
+            #include ../../dx/overshell/dx_warning_states.dta
+            #include ../../dx/overshell/dx_milo_states.dta
          )
          (enter
-            #ifndef HX_WII
-               {unless $dx_set_overshell_tex_once
-                  {set $dx_set_overshell_tex_once TRUE}
-                  {if {== $dx_overshell_theme rb4} OVERSHELL_RB4OS} {if {== $dx_overshell_theme rivals} OVERSHELL_RIVALSOS}
-               }
-            #endif
+            {unless $dx_set_overshell_tex_once
+               {set $dx_set_overshell_tex_once TRUE}
+               {if {== $dx_overshell_theme rb4} OVERSHELL_RB4OS} {if {== $dx_overshell_theme rivals} OVERSHELL_RIVALSOS}
+            }
             {$this iterate UIList $l {$l set scroll_time 0}}
             {overshell_player_message set_showing FALSE})
          (exit)
@@ -253,6 +251,7 @@
                $zero_players_dialog_up
                {ui_event_mgr dismiss_dialog_event}}}
          ;hides score and crowd meter if no players active
+         {if {exists beatmatch} {unless {get_track_panel}
          {if_else
             {&&
                $zero_players
@@ -262,7 +261,8 @@
                hide_score}
             {{{get_track_panel}
                my_track_panel_dir} 
-               show_score}}}
+               show_score}}
+         }}}
       {ui
          foreach_screen
          $screen

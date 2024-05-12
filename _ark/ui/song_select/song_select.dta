@@ -26,15 +26,7 @@
    (song_data_mounted
       {$this refresh_top})
    (enter
-      {dx_presence_manager}
-      ;{dx_sv_menu_logo_set sv4_panel}
-      {set $dx_trainer_real_guitar FALSE}
-      {set $dx_trainer_real_bass FALSE}
-      {set $dx_trainer_real_keys FALSE}
-      {set $dx_trainer_real_drum FALSE}
-      {set $dx_skip_game_setup FALSE}
-      {unless $dx_song_select_noise {synth stop_all_sfx TRUE}} ; dx - removes the annoying noises in song select
-      {dx_send_leader_song_speed}
+      {$this iterate UIList $l {$l set scroll_time 0}}
       {net_sync set_ui_state kNetUI_MusicLibrary}
       {set
          [should_go_to_art_maker]
@@ -83,24 +75,165 @@
       {$this
          refresh_sort
          [waiting_for_sort]}
-      {if $dx_confirm_song_count
-         {set $high_song_count 4000}
-         {unless $rb3e_checked_song_count
-            {set $rb3e_checked_song_count TRUE}
-            {if {> {{song_select_panel find song.lst} num_data} $high_song_count}
-               {dx_modal_messenger_symbol 'High song counts, especially with multiple players, have been known to cause instability issues after prolonged play-time. It is recommended to:\nStick to music video venues\nTurn off song transition cutscenes\nAvoid very long, 10 min+ songs\nOr lower your song count\nYou have been warned.\n\nTo disable this warning go to Deluxe Settings > Tweaks > Other Settings > Pop-Up Options'}
-            }
-         }
+      {dx_song_select_enter}
+      #ifdef HX_WII
+      {rnd set_in_game TRUE}
+      #endif
+      {if $dx_prep_show_flow
+         {music_library.lbl set text_token dx_play_a_show}
       }
-      {unless $gocentral_sanity_checked
-         {if {&& {! {session_mgr is_local}} {< {{song_select_panel find song.lst} num_data} 130}}
-            {set $gocentral_sanity_checked TRUE}
-            {dx_modal_messenger_symbol 'If you show up to custom online lobbies in 2023 without dlc I hope you find jesus'}
+   )
+   (pick_a_song
+      ;{song.lst set_scroll_user $stored_user}
+      ;it does it 3 times if its not a song before falling back to an rb3 song
+      ;i know it sucks, im tired
+      {if_else {== {{music_library get_highlighted_node} get_node_type} kNodeSong}
+         {do
+            {set $poopie ()}
+            {resize $poopie 0}
+            {push_back $poopie {{music_library get_highlighted_node} get_token}}
+            {set $poopie {array $poopie}}
+            {set $picked_song {elem $poopie 0}}
+            {song.lst refresh}
+            {set $num {random_int 0 {song.lst num_data}}}
+            {song.lst set_selected_simulate_scroll $num}
+            $picked_song
+         }
+         {do
+            {song.lst refresh}
+            {set $num {random_int 0 {song.lst num_data}}}
+            {song.lst set_selected_simulate_scroll $num}
+            {if_else {== {{music_library get_highlighted_node} get_node_type} kNodeSong}
+               {do
+                  {set $poopie ()}
+                  {resize $poopie 0}
+                  {push_back $poopie {{music_library get_highlighted_node} get_token}}
+                  {set $poopie {array $poopie}}
+                  {set $picked_song {elem $poopie 0}}
+                  {song.lst refresh}
+                  {set $num {random_int 0 {song.lst num_data}}}
+                  {song.lst set_selected_simulate_scroll $num}
+                  $picked_song
+               }
+               {do
+                  {song.lst refresh}
+                  {set $num {random_int 0 {song.lst num_data}}}
+                  {song.lst set_selected_simulate_scroll $num}
+                  {if_else {== {{music_library get_highlighted_node} get_node_type} kNodeSong}
+                     {do
+                        {set $poopie ()}
+                        {resize $poopie 0}
+                        {push_back $poopie {{music_library get_highlighted_node} get_token}}
+                        {set $poopie {array $poopie}}
+                        {set $picked_song {elem $poopie 0}}
+                        {song.lst refresh}
+                        {set $num {random_int 0 {song.lst num_data}}}
+                        {song.lst set_selected_simulate_scroll $num}
+                        $picked_song
+                     }
+                     {do
+                        {song.lst refresh}
+                        {set $num {random_int 0 {song.lst num_data}}}
+                        {song.lst set_selected_simulate_scroll $num}
+                        {if_else {== {{music_library get_highlighted_node} get_node_type} kNodeSong}
+                           {do
+                              {set $poopie ()}
+                              {resize $poopie 0}
+                              {push_back $poopie {{music_library get_highlighted_node} get_token}}
+                              {set $poopie {array $poopie}}
+                              {set $picked_song {elem $poopie 0}}
+                              {song.lst refresh}
+                              {set $num {random_int 0 {song.lst num_data}}}
+                              {song.lst set_selected_simulate_scroll $num}
+                              $picked_song
+                           }
+                           {do
+                              {song.lst refresh}
+                              {set $num {random_int 0 {song.lst num_data}}}
+                              {song.lst set_selected_simulate_scroll $num}
+                              {if_else {== {{music_library get_highlighted_node} get_node_type} kNodeSong}
+                                 {do
+                                    {set $poopie ()}
+                                    {resize $poopie 0}
+                                    {push_back $poopie {{music_library get_highlighted_node} get_token}}
+                                    {set $poopie {array $poopie}}
+                                    {set $picked_song {elem $poopie 0}}
+                                    {song.lst refresh}
+                                    {set $num {random_int 0 {song.lst num_data}}}
+                                    {song.lst set_selected_simulate_scroll $num}
+                                    $picked_song
+                                 }
+                                 {do
+                                    {song.lst refresh}
+                                    {set $num {random_int 0 {song.lst num_data}}}
+                                    {song.lst set_selected_simulate_scroll $num}
+                                    {if_else {== {{music_library get_highlighted_node} get_node_type} kNodeSong}
+                                       {do
+                                          {set $poopie ()}
+                                          {resize $poopie 0}
+                                          {push_back $poopie {{music_library get_highlighted_node} get_token}}
+                                          {set $poopie {array $poopie}}
+                                          {set $picked_song {elem $poopie 0}}
+                                          {song.lst refresh}
+                                          {set $num {random_int 0 {song.lst num_data}}}
+                                          {song.lst set_selected_simulate_scroll $num}
+                                          $picked_song
+                                       }
+                                       {do
+                                          {song.lst refresh}
+                                          {set $num {random_int 0 {song.lst num_data}}}
+                                          {song.lst set_selected_simulate_scroll $num}
+                                          {if_else {== {{music_library get_highlighted_node} get_node_type} kNodeSong}
+                                             {do
+                                                {set $poopie ()}
+                                                {resize $poopie 0}
+                                                {push_back $poopie {{music_library get_highlighted_node} get_token}}
+                                                {set $poopie {array $poopie}}
+                                                {set $picked_song {elem $poopie 0}}
+                                                {song.lst refresh}
+                                                {set $num {random_int 0 {song.lst num_data}}}
+                                                {song.lst set_selected_simulate_scroll $num}
+                                                $picked_song
+                                             }
+                                             {do
+                                                {song.lst refresh}
+                                                {set $num {random_int 0 {song.lst num_data}}}
+                                                {song.lst set_selected_simulate_scroll $num}
+                                                {if_else {== {{music_library get_highlighted_node} get_node_type} kNodeSong}
+                                                   {do
+                                                      {set $poopie ()}
+                                                      {resize $poopie 0}
+                                                      {push_back $poopie {{music_library get_highlighted_node} get_token}}
+                                                      {set $poopie {array $poopie}}
+                                                      {set $picked_song {elem $poopie 0}}
+                                                      {song.lst refresh}
+                                                      {set $num {random_int 0 {song.lst num_data}}}
+                                                      {song.lst set_selected_simulate_scroll $num}
+                                                      $picked_song
+                                                   }
+                                                   {do
+                                                      {set $picked_song {random_elem $rb3_songlist}}
+                                                      $picked_song
+                                                   }
+                                                }
+                                             }
+                                          }
+                                       }
+                                    }
+                                 }
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
          }
       }
    )
    (TRANSITION_COMPLETE_MSG
       {dx_restore_online_transitions}
+      {dx_song_select_endurance}
       {if
          [resume_setlist_edit]
          {ui push_screen edit_setlist_screen}
@@ -113,16 +246,7 @@
          {ui goto_screen patch_select_practice_space_screen}
          {set
             [should_go_to_art_maker]
-            FALSE}}
-      {if {|| $dx_customizer $dx_auto_endurance}
-         {script_task kTaskSeconds
-            (delay {if_else $dx_auto_endurance 1.5 0})
-            (script
-               {gamemode set_mode qp_coop}
-               {music_library select_highlighted_node {input_mgr get_user}}
-            )
-         }
-      })
+            FALSE}})
    (exit
       {set
          [details_mode]
@@ -134,7 +258,10 @@
       {rock_central remove_sink $this server_status_changed}
       {platform_mgr remove_sink $this signin_changed}
       {platform_mgr remove_sink $this profile_swapped}
-      {platform_mgr remove_sink $this storage_changed})
+      {platform_mgr remove_sink $this storage_changed}
+      #ifdef HX_WII
+      {rnd set_in_game FALSE}
+      #endif)
    (BUTTON_DOWN_MSG
       {if_else
          {ui in_transition}
@@ -231,10 +358,16 @@
                         {delete_content_confirm_screen
                            set
                            content
+                           #ifdef HX_WII
+                           {{music_library get_highlighted_node}
+                              id}
+                           #else
                            {song_mgr
                               content_name
                               {{music_library get_highlighted_node}
-                                 id}}}
+                                 id}}
+                           #endif
+                         }
                         {ui push_screen delete_content_confirm_screen}}
                      {do
                         {push_basic_confirm_dialog_small delete_song_no_online}}})
@@ -395,11 +528,7 @@
                         $setlist}
                      DX_AUTOSAVE
                      {$component set text_token share_setlist}})
-               kDataUnhandled
-            }
-         }
-      }
-   )
+               kDataUnhandled}}})
    (refresh_leaderboard
       ($user)
       {do
@@ -441,6 +570,43 @@
                      {instruments.lst scroll 1 $user})}})
          ({== $action kAction_Option}
             {$this hide_details})
+         #ifdef HX_WII
+         ({'||'
+               {== $action kAction_Left}
+               {== $action kAction_Right}}
+            {do
+               ($node
+                  {music_library get_highlighted_node})
+               ($type
+                  {$node get_node_type})
+               ($new_score
+                  {if_else
+                     {== $action kAction_Left}
+                     {mod
+                        {-
+                           {header_review.rvw get score}
+                           1}
+                        6}
+                     {mod
+                        {'+'
+                           {header_review.rvw get score}
+                           1}
+                        6}})
+               {if
+                  {&&
+                     {!
+                        [waiting_for_sort]}
+                     {song_review.grp showing}}
+                  {{profile_mgr get_primary_profile}
+                     set_song_review
+                     {$node id}
+                     $new_score}
+                  {$node update_review}
+                  {header_review.rvw set_values $new_score TRUE}
+                  {set
+                     [reviews_dirty]
+                     TRUE}}})
+         #endif
          ({== $action kAction_Cancel}
             {with
                song_select_details
@@ -538,6 +704,9 @@
                   #ifdef HX_PS3
                   (kAction_Confirm TRUE)
                   #endif
+                  #ifdef HX_WII
+                  (kAction_Confirm TRUE)
+                  #endif
                   kDataUnhandled}})
          ({== $action kAction_Up}
             {do
@@ -608,6 +777,14 @@
                   refresh_all_settings}
                {song_select_filter_panel filter_enter}})
          ({== $action kAction_Cancel}
+            {if_else $dx_prep_show_flow
+               {do
+                  {set $dx_in_show_flow FALSE}
+                  {set $dx_prep_show_flow FALSE}
+                  {set $dx_playing_a_show FALSE}
+                  {overshell end_override_flow kOverrideFlow_SongSettings TRUE}
+                  {ui sync_screen meta_loading_main_screen 0}
+               }
             {cond
                ({&&
                      {music_library get_making_setlist}
@@ -634,7 +811,7 @@
                         0}
                      {ui_event_mgr trigger_event remote_not_ready}})
                (TRUE
-                  {ui_event_mgr trigger_event remote_exit})})
+                  {ui_event_mgr trigger_event remote_exit})}})
          ({&&
                {== $action kAction_Confirm}
                {!
@@ -708,14 +885,8 @@
                [waiting_for_sort]
                {song.lst set_scroll_user $user}
                {music_library skip_to_next_shortcut}})
-         ({&&
-               {== $action kAction_Right}
-               {!
-                  {song.lst is_scrolling}}}
-            {unless
-               [waiting_for_sort]
-               {song.lst set_scroll_user $user}
-               {song.lst scroll 10}}) ; dx scroll the list down by 10 slots when pressing right dpad
+         DX_SONG_LIST_LEFT_ACTION
+         DX_SONG_LIST_RIGHT_ACTION
          ({&&
                {== $action kAction_PageUp}
                {!
@@ -724,14 +895,6 @@
                [waiting_for_sort]
                {song.lst set_scroll_user $user}
                {music_library skip_to_prev_shortcut}})
-         ({&&
-               {== $action kAction_Left}
-               {!
-                  {song.lst is_scrolling}}}
-            {unless
-               [waiting_for_sort]
-               {song.lst set_scroll_user $user}
-               {song.lst scroll -10}}) ; dx scroll the list up by 10 slots when pressing left dpad
          ({'||'
                {== $action kAction_Up}
                {== $action kAction_Down}}
@@ -791,6 +954,14 @@
                         {music_library select_highlighted_node $user})}
                   {play_instr_sfx $user button_select}}})
          ({== $action kAction_Cancel}
+            {if_else $dx_prep_show_flow
+               {do
+                  {set $dx_in_show_flow FALSE}
+                  {set $dx_prep_show_flow FALSE}
+                  {set $dx_playing_a_show FALSE}
+                  {overshell end_override_flow kOverrideFlow_SongSettings TRUE}
+                  {ui sync_screen meta_loading_main_screen 0}
+               }
             {if_else
                {&&
                   {music_library get_making_setlist}
@@ -815,7 +986,7 @@
                   {ui
                      go_back_screen
                      {music_library get_back_screen}
-                     $user}}})
+                     $user}}}})
          ({'||'
                {== $action kAction_PageUp}
                {== $action kAction_PageDown}}
@@ -980,8 +1151,12 @@
                         {gamemode in_mode trainer}}
                      {if_else
                         {&&
+                           #ifdef HX_WII
+                           TRUE
+                           #else
                            {!
                               {$item is_ugc}}
+                           #endif
                            {'||'
                               {&&
                                  {==
@@ -1853,9 +2028,13 @@
                   num_vocal_parts
                   {if_else
                      {$item has_data vocal_parts}
+                     #ifdef HX_WII
+                     {$item vocal_parts}
+                     #else
                      {$item
                         get_data
                         (vocal_parts)}
+                     #endif
                      0}}
                {live_diffs.grp set_showing TRUE})
             {live_diffs.grp set_showing FALSE}}
@@ -1928,14 +2107,28 @@
       {ui
          sync_screen
          {music_library get_next_screen}
-         0})
+         0}
+      {dx_send_leader_song_speed}
+   )
    (storage_changed
       {if
          [details_mode]
          {$this hide_details}}
+      #ifdef HX_WII
+      {if
+         {&&
+            {!=
+               {ui transition_screen}
+               deleting_content_screen}
+            {!=
+               {ui current_screen}
+               deleting_content_screen}}
+         {content_mgr start_refresh}}
+      #else
       {if
          {content_mgr refresh_done}
-         {content_mgr start_refresh}})
+         {content_mgr start_refresh}}
+      #endif)
    (show_setlist_save_dialog
       {ui push_screen setlist_save_screen})
    (show_missing_setlist_songs_dialog
@@ -1983,15 +2176,20 @@
             song_select_details
             {view_gamer_card.ihp set_showing FALSE}
             {performance.lst set showing FALSE}
+            #ifdef HX_WII
+            {lb_status.lbl set text_token lb_error_live}
+            #else
             {if_else
                {platform_mgr is_connected}
                {lb_status.lbl set text_token lb_error}
-               {lb_status.lbl set text_token lb_error_live}}}})}
+               {lb_status.lbl set text_token lb_error_live}}
+            #endif}})}
 {new
    BandScreen
    song_select_screen
-   (panels meta postsong_sfx_panel DX_SV4_PANEL song_select_panel song_select_shortcut_panel song_select_filter_panel)
+   (panels meta postsong_sfx_panel #ifdef HX_WII sv4_panel #else DX_SV4_PANEL #endif song_select_panel song_select_shortcut_panel song_select_filter_panel)
    (focus song_select_panel)
    (enter
+      {song_select_panel set_showing TRUE}
       {sv4_panel set_showing TRUE})
    (net_sync_scroll FALSE)}

@@ -389,19 +389,19 @@
    #endif
    (wait_for_splash FALSE) ; dx - removes splash screen wait time in conjunction with xex mod
    (default_allow_edit_text TRUE)
-   #ifndef _SHIP
+   ;#ifndef _SHIP
    (cheat_init
       #include ../ui/cheat.dta
       #include ../ui/panel_select.dta
       #include ../ui/locale.dta)
-   #endif
+   ;#endif
    (init))
 (locale)
 (net
    (session
       (game_start_delay 2000)
-      (connection_timeout 15000)
-      (max_connection_silence 3000))
+      (connection_timeout 60000)
+      (max_connection_silence 12000))
    (searcher
       (search_limit 8))
    (server

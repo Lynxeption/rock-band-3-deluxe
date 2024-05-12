@@ -1,0 +1,153 @@
+#define DX_MAIN_HANDLES
+(
+   (dx_main_on_enter
+      {if {&& {! $dx_playing_a_show} {! $dx_prep_show_flow} {! $dx_in_show_flow}}
+         {set $dx_play_a_show_active_instruments ()}
+         {resize $dx_play_a_show_active_instruments 0}
+      }
+      {if_else $dx_playing_a_show
+         {$this dx_play_a_show}
+         {do
+            #ifndef HX_WII
+            DX_SET_SERVER_LOCALE ; dx - change button and label text when connected to ashcentral
+            {dx_presence_manager}
+            #endif
+            {dx_sv_menu_logo_set sv3_panel}
+            {set $dx_random_number {random_int 0 4096}}
+            {if {== $dx_random_number 2112}
+               {dx_passive_messenger you_lost}
+            }
+            {$this dx_check_birthday}
+            #ifndef HX_PS3
+            {content_mgr start_refresh}
+            #endif
+            {mb_musicstore.btn set markup TRUE}
+            {mb_musicstore.btn set alt_style_enabled TRUE}
+            {mb_musicstore.btn set alt_font_resource_name {mb_musicstore.btn get resource_name}}
+         }
+      }
+   )
+   (dx_unlock_pre_orders
+      {switch {{$player get_user} get_slot_num}
+         (0
+            {main_hub_panel unlock_gamestop_award 0}
+            {main_hub_panel unlock_x79_award 0}
+            {main_hub_panel unlock_d2010_award 0}
+         )
+         (1
+            {main_hub_panel unlock_gamestop_award 1}
+            {main_hub_panel unlock_x79_award 1}
+            {main_hub_panel unlock_d2010_award 1}
+         )
+         (2
+            {main_hub_panel unlock_gamestop_award 2}
+            {main_hub_panel unlock_x79_award 2}
+            {main_hub_panel unlock_d2010_award 2}
+         )
+         (3
+            {main_hub_panel unlock_gamestop_award 3}
+            {main_hub_panel unlock_x79_award 3}
+            {main_hub_panel unlock_d2010_award 3}
+         )
+      }
+   )
+   (dx_check_dx
+      {unless {file_exists DX_SETTINGS_FILE_PATH}
+         {unless $dxwelcomeseen
+            {profile_mgr set_voice_chat_volume 0}
+            {dx_log_writer info {sprint "Cannot find DX.dta"}}
+            {ui push_screen hint_dx_welcome_screen}
+         }
+      }
+   )
+   (dx_check_xeniawrites
+      {unless {file_exists DX_SETTINGS_FILE_PATH}
+         {if $dxwelcomeseen
+            {unless $dx_settings_error
+               {dx_log_writer info {sprint "Cannot write DX.dta"}}
+               {ui push_screen hint_relative_writes_screen}
+            }
+         }
+      }
+   )
+   (dx_check_birthday
+      ;($year $month $day $hour $minute $second)
+      {get_date_time $year $month $day $hour $minute $second}
+      {if
+         {&&
+            {! $dx_msg_birth}
+            ;{> $year 2023}
+            {== $month 10}
+            {== $day 25}
+         }
+         {set $dx_msg_birth TRUE}
+         {dx_passive_messenger_symbol "Happy Birthday Shiloh!"}
+      }
+   )
+   (dx_play_a_show
+      {if {! $play_a_show_mentioned}
+         {set $play_a_show_mentioned TRUE}
+         {set $read_array ()}
+         {set $song_array ()}
+         {set $dtaarray ()}
+         {resize $read_array 0}
+         {resize $song_array 0}
+         {resize $dtaarray 2}
+         {set $num_voted_songs 0}
+      }
+      {if_else {> {size $dtaarray} 1}
+         {do
+            {set $dx_playing_a_show TRUE}
+            {dx_presence_manager}
+            {set $current_voted_song FALSE}
+            {set $dx_playlist_array ()}
+            {resize $dx_playlist_array 0}
+            {set $dx_playlist_queue_array ()}
+            {resize $dx_playlist_queue_array 0}
+            {set $dx_play_a_show_required_votes 0}
+            {set $dx_play_a_show_num_votes 0}
+            {set $slot1_voted FALSE}
+            {set $slot2_voted FALSE}
+            {set $slot3_voted FALSE}
+            {set $slot4_voted FALSE}
+            {set $slot1_vote FALSE}
+            {set $slot2_vote FALSE}
+            {set $slot3_vote FALSE}
+            {set $slot4_vote FALSE}
+            {gamemode set_mode qp_coop}
+            {if_else {== {size $dx_play_a_show_active_instruments} 0}
+               {do
+                  {set $rb3_songlist
+                     (
+                        20thcenturyboy 25or6to4 antibodies
+                        beforeiforget bohemianrhapsody breakonthrough centerfold
+                        chinagrove coldasice combatbaby crosstowntraffic deadendfriends
+                        dontstandsoclosetome duhast everybodywantstorule flylikeaneagle
+                        foolin getupstandup goodvibrationslive heartofglass hereigoagain
+                        humanoid ifeelgoodalt iloverocknroll inabigcountry
+                        ineedtoknow inthemeantime justlikeheaven killingloneliness
+                        lastdance livinginamerica lowrider meenamora midlifecrisis
+                        needyoutonight ohmygod
+                        oyemiamor portionsforfoxes radarlove rainbowinthedark rehab rocklobster roundabout
+                        saturdaynightsalright sisterchristian smokeonthewater somethingbigger spaceoddity
+                        stopmeifyouthink thebeautifulpeople thecon thekillingmoon thelook
+                        thepoweroflove thisbastardslife walkinonthesun walkoflife
+                        werewolvesoflondon whipit yoshimibattles
+                     )
+                  }
+                  {meta_performer set_song {random_elem $rb3_songlist}}
+                  {set $dx_prep_show_flow TRUE}
+                  {ui abstract_wipe}
+                  {ui goto_screen song_select_enter_screen}
+               }
+               {do
+                  {set $dx_in_show_flow TRUE}
+                  {meta_performer set_song antibodies}
+                  {ui sync_screen dx_play_a_show_screen 0}
+               }
+            }
+         }
+         {dx_passive_messenger_symbol 'No songs found'}
+      }
+   )
+)

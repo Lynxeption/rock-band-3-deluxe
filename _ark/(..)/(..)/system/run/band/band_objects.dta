@@ -2736,16 +2736,10 @@
                         {&&
                            {!
                               [disabled]}
-                           #ifdef HX_WII
-                           {{get_track_panel my_track_panel_dir}
-                              tracks_extended}
-                           #else
                            {'||'
                               {exists milo}
                               {{get_track_panel my_track_panel_dir}
-                                 tracks_extended}
-                           }
-                           #endif}
+                                 tracks_extended}}}
                         {if_else
                            {>
                               [total_slots]

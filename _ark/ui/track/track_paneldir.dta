@@ -101,6 +101,18 @@
          (track_2_cam_rect_frame 0.0)
          (track_3_shift_frame 0.0)
          (track_3_cam_rect_frame 0.0)
+         (pitch -44.0)
+         (fade_start 330)
+         (fade_length 100)
+         (fov 15)
+         (y_pos -229)
+         (z_pos 47)
+         (own_perspective FALSE)
+         (cam_offset 0.1)
+         (cam_offset_ps3 0.1)
+         (x_offset 24)
+         (side_angle 0)
+         (track_speed 52)
          (objects
             ())
          (visibles
