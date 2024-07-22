@@ -17,7 +17,7 @@
    {dx_setting_saver dx_settings dx_forced_main_menu_bg $dx_forced_main_menu_bg}
    {dx_setting_saver dx_settings dx_forced_song_select_bg $dx_forced_song_select_bg}
    {dx_setting_saver dx_settings dx_sv8_dx_vers $dx_sv8_dx_vers}
-   {dx_setting_saver dx_settings dx_forced_song_load_bg $dx_forced_song_load_bg}
+   {dx_setting_saver dx_settings dx_forced_outro_vignette $dx_forced_outro_vignette}
    {dx_setting_saver dx_settings emulate_fps $emulatefps}
    {dx_setting_saver dx_settings dx_vsync $dx_vsync}
    {dx_setting_saver dx_settings track_speed $trackspeed}
@@ -37,6 +37,7 @@
    {dx_setting_saver dx_settings dx_scroll_sound $dx_scroll_sound}
    {dx_setting_saver dx_settings dx_whammy_fx_enabled $dx_whammy_fx}
    {dx_setting_saver dx_settings dx_instrument_fx $dx_instrument_fx}
+   {dx_setting_saver dx_settings dx_fail_flash $dx_fail_flash}
    {dx_setting_saver dx_settings dx_long_mtv_delay $dx_long_mtv_delay}
    {dx_setting_saver dx_settings dx_set_postfx $dx_postfx}
    {dx_setting_saver dx_settings dx_currentsong_prefix $dx_currentsong_prefix}
@@ -171,7 +172,8 @@
    {dx_setting_saver dx_track_theme overdrive_color ($dx_overdrive_r $dx_overdrive_g $dx_overdrive_b)}
    {dx_setting_saver dx_track_theme gems $dx_gem}
    {dx_setting_saver dx_track_theme strikeline $dx_smasher}
-   {dx_setting_saver dx_track_theme flames $dx_flames}
+   {dx_setting_saver dx_track_theme flares $dx_flares}
+   {dx_setting_saver dx_track_theme particles $dx_particles}
    {dx_setting_saver dx_track_theme sustains $dx_sustain}
    {dx_setting_saver dx_track_theme lanes $dx_lanes}
    {dx_setting_saver dx_track_theme score_box $dx_score_box}
