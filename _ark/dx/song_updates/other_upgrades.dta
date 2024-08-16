@@ -762,6 +762,35 @@
    (real_bass_tuning (0 0 0 0))
    (strings_author "kevinturner"))
 ; RB4 DLC upgrades
+(allaboutthatbass
+   (upgrade_version 1) 
+   (song
+      (tracks
+         ((drum
+               (0 1))
+            (bass
+               (2 3))
+            (guitar
+               (4 5))
+            (vocals
+               (6 7))
+            (keys
+               (8 9)))))
+   (rank
+      (drum 133)
+      (guitar 102)
+      (bass 183)
+      (vocals 405)
+      (keys 153)
+      (real_keys 153)
+      (real_guitar 150)
+      (real_bass 208)
+      (band 167))
+   (real_guitar_tuning (0 0 0 0 0 0))
+   (real_bass_tuning (0 0 0 0))
+   (keys_author "gospeedgo11")
+   (strings_author "gospeedgo11")
+   (version 30))
 (angel3
    (upgrade_version 1) 
    (song
@@ -903,6 +932,30 @@
       (band 320))
    (keys_author "C0Assassin")
    (version 30))
+(hardtimes
+   (upgrade_version 1) 
+   (song
+      (tracks
+         ((drum
+               (0 1))
+            (bass
+               (2 3))
+            (guitar
+               (4 5))
+            (vocals
+               (6 7))
+            (keys
+               (8 9)))))
+   (rank
+      (drum 265)
+      (guitar 240)
+      (bass 285)
+      (vocals 365)
+      (keys 340)
+      (real_keys 340)
+      (band 265))
+   (keys_author "JIManji, Ultimate_MANG0, BowlsforRick")
+   (version 30))
 (heatwaves
    (upgrade_version 1) 
    (song
@@ -929,6 +982,35 @@
    (version 30)
    (vocal_tonic_note 11)
    (song_tonality 0))
+(heavenisaplaceonearth
+   (upgrade_version 1) 
+   (song
+      (tracks
+         ((drum
+               (0 1))
+            (bass
+               (2 3))
+            (guitar
+               (4 5))
+            (vocals
+               (6 7))
+            (keys
+               (8 9)))))
+   (rank
+      (drum 340)
+      (guitar 360)
+      (bass 229)
+      (vocals 225)
+      (keys 211)
+      (real_keys 211)
+      (real_guitar 384)
+      (real_bass 267)
+      (band 265))
+   (real_guitar_tuning (0 0 0 0 0 0))
+   (real_bass_tuning (0 0 0 0))
+   (keys_author "gospeedgo11")
+   (strings_author "gospeedgo11")
+   (version 30))
 (holdtheline
    (upgrade_version 1) 
    (song
@@ -1090,6 +1172,30 @@
    (vocal_tonic_note 4)
    (song_tonality 1)
    (version 30))
+(reelinintheyears
+   (upgrade_version 1) 
+   (song
+      (tracks
+         ((drum
+               (0 1))
+            (bass
+               (2 3))
+            (guitar
+               (4 5))
+            (vocals
+               (6 7))
+            (keys
+               (8 9)))))
+   (rank
+      (drum 295)
+      (guitar 345)
+      (bass 330)
+      (vocals 245)
+      (keys 1)
+      (real_keys 1)
+      (band 280))
+   (keys_author "EdTanguy")
+   (version 30))
 (seasonsofwither
    (upgrade_version 1) 
    (rank
@@ -1103,6 +1209,30 @@
    (real_guitar_tuning (0 0 0 0 0 0))
    (real_bass_tuning (0 0 0 0))
    (strings_author "The Other Side"))
+(speedofsound2
+   (upgrade_version 1) 
+   (song
+      (tracks
+         ((drum
+               (0 1))
+            (bass
+               (2 3))
+            (guitar
+               (4 5))
+            (vocals
+               (6 7))
+            (keys
+               (8 9)))))
+   (rank
+      (drum 151)
+      (guitar 176)
+      (bass 135)
+      (vocals 279)
+      (keys 170)
+      (real_keys 250)
+      (band 215))
+   (keys_author "Bansheeflyer, BowlsforRick")
+   (version 30))
 (starlight2
    (upgrade_version 1) 
    (song
@@ -1147,6 +1277,35 @@
    (real_guitar_tuning (-3 -1 -1 -1 -1 -1))
    (real_bass_tuning (-3 -1 -1 -1))
    (strings_author "SquibbleNibs"))
+(thesign
+   (upgrade_version 1) 
+   (song
+      (tracks
+         ((drum
+               (0 1))
+            (bass
+               (2 3))
+            (guitar
+               (4 5))
+            (vocals
+               (6 7))
+            (keys
+               (8 9)))))
+   (rank
+      (drum 189)
+      (guitar 199)
+      (bass 178)
+      (vocals 316)
+      (keys 153)
+      (real_keys 153)
+      (real_guitar 208)
+      (real_bass 150)
+      (band 234))
+   (real_guitar_tuning (0 0 0 0 0 0))
+   (real_bass_tuning (0 0 0 0))
+   (keys_author "gospeedgo11")
+   (strings_author "gospeedgo11")
+   (version 30))
 (whatyouknow
    (upgrade_version 1) 
    (song

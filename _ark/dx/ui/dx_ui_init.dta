@@ -6,6 +6,7 @@
    {set $dx_mtv_holder {array ()}}
    {set $dx_state_tracker {array ()}}
 }
+
 #ifndef HX_WII
 ;needs font on wii
 {set $dx_song_select_rings TRUE}
@@ -14,7 +15,6 @@
 {set $dx_high_score_report TRUE}
 {set $highscore_tracker ()}
 {resize $highscore_tracker 0}
-{set $dx_vsync TRUE}
 #ifdef _SHIP
 DX_LOG_CLEAR
 DX_JSON_CLEAR
@@ -65,13 +65,13 @@ DX_CURRENT_SONG_CLEAR
    {set $dx_confirm_song_count TRUE}
 }
 
-{if_else $dx_event_mode
-   {set $dx_ash_welcome_msg TRUE}
-   {set $dx_ash_welcome_msg FALSE}
-}
-
 {set $dx_time_remaining_on_top TRUE}
 
+{set $dx_brutal_initialized 0} ;tracks how many beats from the beginning of the song we have ran the brutal mode script to overdo setting it
+{set $dx_brutal0_init FALSE}
+{set $dx_brutal1_init FALSE}
+{set $dx_brutal2_init FALSE}
+{set $dx_brutal3_init FALSE}
 {set $brutal_number_0 -26}
 {set $brutal_number_1 -26}
 {set $brutal_number_2 -26}
@@ -169,14 +169,18 @@ DX_CURRENT_SONG_CLEAR
 ;#ifdef HX_PS3
 ;   {write_file {sprint "GD:/dev_hdd0/game/" DX_TITLE_ID "/USRDIR/boot_time.dta"} {array $dx_boot_time}}
 ;#endif
-   
 
-#ifndef HX_WII
-;author finder setup
-{unless $dx_ps3hw
-   {set $dx_author_finder_is_enabled TRUE}
+{if_else {== $dx_detected_platform platform_rpcs3}
+   {set $dx_vsync FALSE}
+   {set $dx_vsync TRUE}
 }
-#endif
+
+;#ifndef HX_WII
+;author finder setup
+;{unless $dx_ps3hw
+   {set $dx_author_finder_is_enabled TRUE}
+;}
+;#endif
 #ifdef HX_PS3
 {unless $dx_ps3hw
    {set $dx_song_delay TRUE}
@@ -184,12 +188,21 @@ DX_CURRENT_SONG_CLEAR
 #endif
 
 ;set mtv vars, trainer doesn't like these empty on boot
-{set $artistvar "No Artist Found"}
-{set $yearvar "No Year Found"}
-{set $albumvar "No Album Found"}
-{set $genrevar "No Genre Found"}
-{set $subgenrevar "No Sub Genre Found"}
-{set $sourcevar "No Source Found"}
+;{set $artistvar "No Artist Found"}
+;{set $yearvar "No Year Found"}
+;{set $albumvar "No Album Found"}
+;{set $genrevar "No Genre Found"}
+;{set $subgenrevar "No Sub Genre Found"}
+;{set $sourcevar "No Source Found"}
+;{set $namevar "No Name Found"}
+;{set $dx_loading_tip_var "No Song Key Found"}
+;{set $mastervar "No Song Key Found"}
+;{set $authorvar "No Song Key Found"}
+;{set $stringsauthorvar "No Song Key Found"}
+;{set $keysauthorvar "No Song Key Found"}
+;{set $dx_vocal_tonic_note_var "No Song Key Found"}
+;{set $dx_song_tonality_var "No Song Key Found"}
+;{set $dx_song_key_var "No Song Key Found"}
 
 {set $dx_player_icons TRUE}
 
@@ -364,19 +377,10 @@ DX_CURRENT_SONG_CLEAR
 
 
 ;set default pp
-#ifdef HX_PS3
-{if_else $dx_ps3hw
-   {do
-	  {set $emulatefps 30}
-   }
-   {do
-	  {set $emulatefps 60}
-     {set $dx_force_lod TRUE}
-   }
+{if {== $dx_detected_platform platform_rpcs3}
+   {set $dx_force_lod TRUE}
 }
-#else
 {set $emulatefps 30}
-#endif
 
 ;animated texture name. must have ran "enable_animation.bat" first. current animated gems are
 ;rb4
@@ -534,16 +538,7 @@ DX_CURRENT_SONG_CLEAR
 
 ;default pp
 {set $dx_noise 0}
-
-#ifdef HX_PS3
-{if_else $dx_ps3hw
-	{set $dx_motion_blur 1}
-	{set $dx_motion_blur 0}
-}
-#else
 {set $dx_motion_blur 1}
-#endif
-
 {set $dx_camera_blur 1}
 {set $dx_camera_shake 1}
 
@@ -642,7 +637,7 @@ DX_CURRENT_SONG_CLEAR
 {set $dx_instrument_icons rb3}
 {set $dx_song_select_rings FALSE}
 {set $dx_diff_popups FALSE}
-{set $dx_author_finder_is_enabled FALSE}
+;{set $dx_author_finder_is_enabled FALSE}
 {set $dx_force_lod FALSE}
 #endif
 
@@ -689,9 +684,9 @@ DX_CURRENT_SONG_CLEAR
 }
 
 ;for safety
-{if $dx_ps3hw
-   {set $dx_author_finder_is_enabled FALSE}
-}
+;{if $dx_ps3hw
+;   {set $dx_author_finder_is_enabled FALSE}
+;}
 {set $dx_forced_outro_vignette ()}
 {resize $dx_forced_outro_vignette 0}
 

@@ -992,6 +992,9 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (name
+      "Come as You Are (Live from MTV Unplugged)"
+   )
    (song
       (vocal_parts 2)
    )
@@ -6438,380 +6441,6 @@ missing_song_data
    )
    (extra_authoring disc_update)
 )
-(20thcenturyboy
-   (year_released 1973)
-   (year_recorded 1994)
-   (author
-      "Harmonix"
-   )
-)
-(boysarebackintown
-   (year_released 1977)
-   (year_recorded 2009)
-   (vocal_tonic_note 8)
-   (song_tonality 0)
-   (author
-      "Harmonix"
-   )
-   (album_name
-      "Still Dangerous"
-   )
-   (song
-      (vocal_parts 3)
-   )
-   (extra_authoring disc_update)
-   (song_id 1005421)
-   (song_length 274090)
-   (solo
-      (guitar vocal_percussion)
-   )
-   (format 10)
-   (game_origin rb1_dlc)
-   (rating 2)
-)
-(cowboysong_live
-   (year_released 1977)
-   (year_recorded 2009)
-   (author
-      "Harmonix"
-   )
-   (album_name
-      "Still Dangerous"
-   )
-   (song_id 1005422)
-   (song_length 329545)
-   (solo
-      (guitar vocal_percussion)
-   )
-   (format 10)
-   (game_origin rb1_dlc)
-   (rating 1)
-)
-(getupstandup
-   (year_released 1973)
-   (year_recorded 1984)
-   (author
-      "Harmonix"
-   )
-   (album_name
-      "Burnin'"
-   )
-   (album_track_number 1)
-)
-(goodvibrationslive
-   (year_released 1968)
-   (year_recorded 1970)
-   (author
-      "Harmonix"
-   )
-)
-(handmedownworld
-   (song_id 1005636)
-   (vocal_tonic_note 4)
-   (song_tonality 0)
-   (author
-      "Harmonix"
-   )
-   (song
-      (vocal_parts 3)
-   )
-   (extra_authoring disc_update)
-   (song_length 214090)
-   (solo
-      (guitar vocal_percussion)
-   )
-   (format 10)
-   (game_origin rb1_dlc)
-)
-(ifeelgoodalt
-   (year_released 1974)
-   (year_recorded 2010)
-   (author
-      "Harmonix"
-   )
-   (album_art 1)
-   (album_name
-      "Sex Machine Today"
-   )
-   (album_track_number 2)
-)
-(jailbreak_lizzy
-   (year_released 1977)
-   (year_recorded 2009)
-   (author
-      "Harmonix"
-   )
-   (album_name
-      "Still Dangerous"
-   )
-   (extra_authoring disc_update)
-   (song_id 1005420)
-   (song_length 280000)
-   (solo
-      (guitar vocal_percussion)
-   )
-   (format 10)
-   (game_origin rb1_dlc)
-   (rating 2)
-)
-(metalonmetal
-   (song_id 1005664)
-   (author
-      "Harmonix"
-   )
-   (song
-      (vocal_parts 3)
-   )
-   (extra_authoring disc_update)
-   (song_length 246818)
-   (solo
-      (guitar vocal_percussion)
-   )
-   (format 10)
-   (game_origin rb1_dlc)
-   (year_released 1982)
-   (year_recorded 2009)
-)
-(notime
-   (song_id 1005639)
-   (vocal_tonic_note 0)
-   (song_tonality 0)
-   (author
-      "Harmonix"
-   )
-   (song
-      (vocal_parts 3)
-   )
-   (extra_authoring disc_update)
-   (song_length 234545)
-   (solo
-      (guitar)
-   )
-   (format 10)
-   (game_origin rb1_dlc)
-)
-(pickmeup
-   (song_id 1005647)
-   (author
-      "Harmonix"
-   )
-   (extra_authoring disc_update)
-   (song_length 397727)
-   (solo
-      (guitar)
-   )
-   (format 10)
-   (game_origin rb1_dlc)
-)
-(rockyoursocks
-   (song_id 1005618)
-   (vocal_tonic_note 4)
-   (song_tonality 0)
-   (author
-      "Harmonix"
-   )
-   (song
-      (vocal_parts 2)
-   )
-   (extra_authoring disc_update)
-   (song_length 210909)
-   (solo
-      (guitar)
-   )
-   (format 10)
-   (game_origin rb1_dlc)
-)
-(sixsixsix
-   (song_id 1005665)
-   (author
-      "Harmonix"
-   )
-   (song
-      (vocal_parts 3)
-   )
-   (extra_authoring disc_update)
-   (song_length 281363)
-   (solo
-      (guitar)
-   )
-   (format 10)
-   (game_origin rb1_dlc)
-   (year_released 1982)
-   (year_recorded 2009)
-)
-(thepoweroflove
-   (year_released 1985)
-   (year_recorded 2006)
-   (author
-      "Harmonix"
-   )
-   (album_name
-      "Back to the Future: Music from the Motion Picture Soundtrack"
-   )
-   (album_track_number 1)
-)
-(thewagon
-   (song_id 1005642)
-   (author
-      "Harmonix"
-   )
-   (song
-      (vocal_parts 3)
-   )
-   (extra_authoring disc_update)
-   (song_length 299090)
-   (solo
-      (guitar)
-   )
-   (format 10)
-   (game_origin rb1_dlc)
-   (rating 2)
-)
-(thisisthirteen
-   (song_id 1005670)
-   (author
-      "Harmonix"
-   )
-   (extra_authoring disc_update)
-   (song_length 368636)
-   (solo
-      (guitar)
-   )
-   (format 10)
-   (game_origin rb1_dlc)
-)
-(valleysofneptune
-   (year_released 1969)
-   (year_recorded 2010)
-   (author
-      "Harmonix"
-   )
-   (format 10)
-)
-(afterlife
-   (version 1)
-   (year_released 2007)
-   (album_name
-      "Avenged Sevenfold"
-   )
-   (album_track_number 4)
-   (vocal_tonic_note 2)
-   (song_tonality 1)
-   (author
-      "Harmonix"
-   )
-   (song
-      (vocal_parts 3)
-   )
-   (extra_authoring disc_update)
-   (song_id 1005132)
-   (song_length 350454)
-   (solo
-      (guitar vocal_percussion)
-   )
-   (format 10)
-   (game_origin rb1_dlc)
-   (rating 2)
-   (alternate_path 1)
-)
-(criticalacclaim
-   (year_released 2007)
-   (album_art 1)
-   (album_name
-      "Avenged Sevenfold"
-   )
-   (album_track_number 1)
-   (author
-      "Harmonix"
-   )
-   (song
-      (vocal_parts 3)
-      (tracks
-         (
-            (drum
-               (0 1 2 3)
-            )
-            (bass
-               (4 5)
-            )
-            (guitar
-               (6 7)
-            )
-            (vocals
-               (8 9)
-            )
-            (keys
-               (10 11)
-            )
-         )
-      )
-   )
-   (extra_authoring disc_update)
-   (rank
-      (drum 360)
-      (guitar 290)
-      (bass 290)
-      (vocals 170)
-      (keys 182)
-      (real_keys 220)
-      (band 300)
-   )
-   (version 30)
-   (keys_author
-      "StackOverflow0x & sageamagoo"
-   )
-   (song_id 1005133)
-   (song_length 314545)
-   (solo
-      (guitar vocal_percussion)
-   )
-   (format 10)
-   (game_origin rb1_dlc)
-   (rating 2)
-   (alternate_path 1)
-)
-(hammerhead
-   (version 1)
-   (year_released 2008)
-   (album_art 1)
-   (album_name
-      "Rise and Fall, Rage and Grace"
-   )
-   (album_track_number 4)
-   (song_tonality 1)
-   (author
-      "Harmonix"
-   )
-   (song
-      (vocal_parts 3)
-   )
-   (extra_authoring disc_update)
-   (upgrade_version 1)
-   (rank
-      (drum 350)
-      (guitar 260)
-      (bass 260)
-      (vocals 120)
-      (band 262)
-      (real_guitar 220)
-      (real_bass 220)
-   )
-   (real_guitar_tuning
-      (0 0 0 0 0 0)
-   )
-   (real_bass_tuning
-      (0 0 0 0)
-   )
-   (song_id 1005135)
-   (song_length 282272)
-   (solo
-      (vocal_percussion)
-   )
-   (format 10)
-   (game_origin rb1_dlc)
-   (rating 2)
-   (alternate_path 1)
-)
 (backinblack_live
    (game_origin rbtp_acdc)
    (vocal_tonic_note 0)
@@ -10316,10 +9945,22 @@ missing_song_data
       (keys 153)
       (real_keys 1)
       (band 230)
+      (real_guitar 390)
+      (real_bass 331)
    )
    (version 30)
    (keys_author
       "FujiSkunk"
+   )
+   (upgrade_version 1)
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "WarGod"
    )
    (song_id 1005009)
    (song_length 220000)
@@ -10557,6 +10198,25 @@ missing_song_data
       (vocal_parts 3)
    )
    (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 177)
+      (guitar 145)
+      (bass 178)
+      (vocals 194)
+      (real_guitar 166)
+      (real_bass 190)
+      (band 175)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "WarGod"
+   )
    (song_length 94545)
    (format 10)
    (game_origin rb1_dlc)
@@ -10640,6 +10300,32 @@ missing_song_data
    (format 10)
    (game_origin rb1_dlc)
    (rating 1)
+)
+(afterlife
+   (vocal_tonic_note 2)
+   (song_tonality 1)
+   (author
+      "Harmonix"
+   )
+   (version 1)
+   (year_released 2007)
+   (album_name
+      "Avenged Sevenfold"
+   )
+   (album_track_number 4)
+   (song
+      (vocal_parts 3)
+   )
+   (extra_authoring disc_update)
+   (song_id 1005132)
+   (song_length 350454)
+   (solo
+      (guitar vocal_percussion)
+   )
+   (format 10)
+   (game_origin rb1_dlc)
+   (rating 2)
+   (alternate_path 1)
 )
 (again
    (vocal_tonic_note 7)
@@ -12319,6 +12005,9 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (name
+      "Blinded by Fear"
+   )
    (extra_authoring disc_update)
    (song_id 1005071)
    (preview 39652 69652)
@@ -12682,6 +12371,30 @@ missing_song_data
    (song_length 216363)
    (solo
       (guitar)
+   )
+   (format 10)
+   (game_origin rb1_dlc)
+   (rating 2)
+)
+(boysarebackintown
+   (vocal_tonic_note 8)
+   (song_tonality 0)
+   (author
+      "Harmonix"
+   )
+   (year_released 1977)
+   (year_recorded 2009)
+   (album_name
+      "Still Dangerous: Live at the Tower Theatre Philadelphia 1977"
+   )
+   (song
+      (vocal_parts 3)
+   )
+   (extra_authoring disc_update)
+   (song_id 1005421)
+   (song_length 274090)
+   (solo
+      (guitar vocal_percussion)
    )
    (format 10)
    (game_origin rb1_dlc)
@@ -13926,35 +13639,19 @@ missing_song_data
    (author
       "Harmonix"
    )
-   (extra_authoring disc_update)
-   (upgrade_version 1)
-   (rank
-      (drum 227)
-      (guitar 219)
-      (bass 192)
-      (vocals 150)
-      (band 205)
-      (real_guitar 264)
-      (real_bass 150)
-   )
-   (real_guitar_tuning
-      (0 0 0 0 0 0)
-   )
-   (real_bass_tuning
-      (0 0 0 0)
-   )
-   (strings_author
-      "JohnSmith"
-   )
    (solo
       (guitar)
    )
    (format 10)
+   (extra_authoring greenday)
    (vocal_tonic_note 2)
 )
 (christmasisthetime
    (author
       "Harmonix"
+   )
+   (album_name
+      "A Rock'n'Roll Christmas"
    )
    (song_id 1005383)
    (song_length 174545)
@@ -14257,13 +13954,44 @@ missing_song_data
    )
    (song
       (vocal_parts 2)
+      (tracks
+         (
+            (drum
+               (0 1 2 3 4)
+            )
+            (bass 5)
+            (guitar
+               (6 7)
+            )
+            (vocals
+               (8 9)
+            )
+            (keys
+               (10 11)
+            )
+         )
+      )
    )
    (extra_authoring disc_update)
-   (song_id 1005190)
-   (song_length 422272)
+   (rank
+      (drum 416)
+      (guitar 405)
+      (bass 405)
+      (vocals 170)
+      (keys 445)
+      (real_keys 460)
+      (band 349)
+   )
    (solo
+      (keys)
       (guitar vocal_percussion)
    )
+   (version 30)
+   (keys_author
+      "Mazegeek999, BowlsforRick"
+   )
+   (song_id 1005190)
+   (song_length 422272)
    (format 10)
    (game_origin rb1_dlc)
    (rating 1)
@@ -14352,6 +14080,24 @@ missing_song_data
       "Open Letter to a Friend"
    )
    (album_track_number 3)
+)
+(cowboysong_live
+   (author
+      "Harmonix"
+   )
+   (year_released 1977)
+   (year_recorded 2009)
+   (album_name
+      "Still Dangerous: Live at the Tower Theatre Philadelphia 1977"
+   )
+   (song_id 1005422)
+   (song_length 329545)
+   (solo
+      (guitar vocal_percussion)
+   )
+   (format 10)
+   (game_origin rb1_dlc)
+   (rating 1)
 )
 (crackerman
    (vocal_tonic_note 6)
@@ -14456,6 +14202,9 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (album_name
+      "Little by Little..."
+   )
    (song
       (vocal_parts 3)
    )
@@ -14496,6 +14245,62 @@ missing_song_data
       (vocal_parts 2)
    )
    (extra_authoring disc_update)
+)
+(criticalacclaim
+   (author
+      "Harmonix"
+   )
+   (year_released 2007)
+   (album_art 1)
+   (album_name
+      "Avenged Sevenfold"
+   )
+   (album_track_number 1)
+   (song
+      (vocal_parts 3)
+      (tracks
+         (
+            (drum
+               (0 1 2 3)
+            )
+            (bass
+               (4 5)
+            )
+            (guitar
+               (6 7)
+            )
+            (vocals
+               (8 9)
+            )
+            (keys
+               (10 11)
+            )
+         )
+      )
+   )
+   (extra_authoring disc_update)
+   (rank
+      (drum 360)
+      (guitar 290)
+      (bass 290)
+      (vocals 170)
+      (keys 182)
+      (real_keys 220)
+      (band 300)
+   )
+   (version 30)
+   (keys_author
+      "StackOverflow0x & sageamagoo"
+   )
+   (song_id 1005133)
+   (song_length 314545)
+   (solo
+      (guitar vocal_percussion)
+   )
+   (format 10)
+   (game_origin rb1_dlc)
+   (rating 2)
+   (alternate_path 1)
 )
 (crosseyedandpainless
    (vocal_tonic_note 11)
@@ -15893,10 +15698,22 @@ missing_song_data
       (band 231)
       (keys 400)
       (real_keys 460)
+      (real_guitar 175)
+      (real_bass 85)
    )
    (version 30)
    (keys_author
       "sageamagoo"
+   )
+   (upgrade_version 1)
+   (real_guitar_tuning
+      (-2 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "RK"
    )
    (song_length 222727)
    (format 10)
@@ -16864,6 +16681,21 @@ missing_song_data
       "Harmonix"
    )
    (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 109)
+      (guitar 222)
+      (bass 0)
+      (vocals 273)
+      (real_guitar 166)
+      (band 230)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (strings_author
+      "kukky"
+   )
 )
 (fever
    (vocal_tonic_note 9)
@@ -17796,6 +17628,25 @@ missing_song_data
       "Harmonix"
    )
    (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 185)
+      (guitar 263)
+      (bass 310)
+      (vocals 251)
+      (real_guitar 371)
+      (real_bass 279)
+      (band 259)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "WarGod"
+   )
    (song_length 205909)
    (solo
       (guitar vocal_percussion)
@@ -18287,6 +18138,48 @@ missing_song_data
    (year_released 2008)
    (year_recorded 2009)
 )
+(hammerhead
+   (song_tonality 1)
+   (author
+      "Harmonix"
+   )
+   (version 1)
+   (year_released 2008)
+   (album_art 1)
+   (album_name
+      "Rise and Fall, Rage and Grace"
+   )
+   (album_track_number 4)
+   (song
+      (vocal_parts 3)
+   )
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 350)
+      (guitar 260)
+      (bass 260)
+      (vocals 120)
+      (band 262)
+      (real_guitar 220)
+      (real_bass 220)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (song_id 1005135)
+   (song_length 282272)
+   (solo
+      (vocal_percussion)
+   )
+   (format 10)
+   (game_origin rb1_dlc)
+   (rating 2)
+   (alternate_path 1)
+)
 (hammersmashedface
    (vocal_tonic_note 3)
    (song_tonality 1)
@@ -18314,6 +18207,24 @@ missing_song_data
    )
    (extra_authoring disc_update)
    (song_length 213181)
+   (format 10)
+   (game_origin rb1_dlc)
+)
+(handmedownworld
+   (vocal_tonic_note 4)
+   (song_tonality 0)
+   (author
+      "Harmonix"
+   )
+   (song_id 1005636)
+   (song
+      (vocal_parts 3)
+   )
+   (extra_authoring disc_update)
+   (song_length 214090)
+   (solo
+      (guitar vocal_percussion)
+   )
    (format 10)
    (game_origin rb1_dlc)
 )
@@ -20257,52 +20168,8 @@ missing_song_data
    )
    (song
       (vocal_parts 3)
-      (tracks
-         (
-            (drum
-               (0 1 2 3 4 5)
-            )
-            (bass
-               (6)
-            )
-            (guitar
-               (7 8)
-            )
-            (vocals
-               (9 10)
-            )
-            (keys
-               (11 12)
-            )
-         )
-      )
    )
    (extra_authoring disc_update)
-   (upgrade_version 1)
-   (rank
-      (drum 350)
-      (guitar 320)
-      (bass 320)
-      (vocals 146)
-      (keys 211)
-      (real_guitar 325)
-      (real_bass 325)
-      (real_keys 211)
-      (band 300)
-   )
-   (real_guitar_tuning
-      (0 0 0 0 0 0)
-   )
-   (real_bass_tuning
-      (0 0 0 0)
-   )
-   (keys_author
-      "JohnSmith"
-   )
-   (strings_author
-      "JohnSmith"
-   )
-   (version 30)
    (song_id 1005127)
    (preview 126800 156800)
    (song_length 277727)
@@ -20310,6 +20177,7 @@ missing_song_data
       (guitar vocal_percussion)
    )
    (format 10)
+   (version 1)
    (game_origin rb1_dlc)
    (rating 2)
    (year_released 2008)
@@ -21020,6 +20888,25 @@ missing_song_data
    )
    (format 10)
    (game_origin rb1_dlc)
+)
+(jailbreak_lizzy
+   (author
+      "Harmonix"
+   )
+   (year_released 1977)
+   (year_recorded 2009)
+   (album_name
+      "Still Dangerous: Live at the Tower Theatre Philadelphia 1977"
+   )
+   (extra_authoring disc_update)
+   (song_id 1005420)
+   (song_length 280000)
+   (solo
+      (guitar vocal_percussion)
+   )
+   (format 10)
+   (game_origin rb1_dlc)
+   (rating 2)
 )
 (jamming
    (vocal_tonic_note 11)
@@ -23451,6 +23338,24 @@ missing_song_data
    (year_released 1980)
    (year_recorded 2010)
 )
+(metalonmetal
+   (author
+      "Harmonix"
+   )
+   (song_id 1005664)
+   (song
+      (vocal_parts 3)
+   )
+   (extra_authoring disc_update)
+   (song_length 246818)
+   (solo
+      (guitar vocal_percussion)
+   )
+   (format 10)
+   (game_origin rb1_dlc)
+   (year_released 1982)
+   (year_recorded 2009)
+)
 (metalthrashingmadlive
    (author
       "Harmonix"
@@ -24966,6 +24871,24 @@ missing_song_data
    (game_origin rb1_dlc)
    (rating 2)
 )
+(notime
+   (vocal_tonic_note 0)
+   (song_tonality 0)
+   (author
+      "Harmonix"
+   )
+   (song_id 1005639)
+   (song
+      (vocal_parts 3)
+   )
+   (extra_authoring disc_update)
+   (song_length 234545)
+   (solo
+      (guitar)
+   )
+   (format 10)
+   (game_origin rb1_dlc)
+)
 (nowomannocry
    (vocal_tonic_note 1)
    (song_tonality 0)
@@ -25826,6 +25749,19 @@ missing_song_data
    )
    (extra_authoring disc_update)
 )
+(pickmeup
+   (author
+      "Harmonix"
+   )
+   (song_id 1005647)
+   (extra_authoring disc_update)
+   (song_length 397727)
+   (solo
+      (guitar)
+   )
+   (format 10)
+   (game_origin rb1_dlc)
+)
 (pickupthepieces
    (vocal_tonic_note 0)
    (song_tonality 0)
@@ -26450,25 +26386,6 @@ missing_song_data
       (vocal_parts 3)
    )
    (extra_authoring disc_update)
-   (upgrade_version 1)
-   (rank
-      (drum 400)
-      (guitar 424)
-      (bass 312)
-      (vocals 215)
-      (band 401)
-      (real_guitar 442)
-      (real_bass 325)
-   )
-   (real_guitar_tuning
-      (-7 -5 -5 -5 -5 -5)
-   )
-   (real_bass_tuning
-      (-7 -5 -5 -5)
-   )
-   (strings_author
-      "JohnSmith"
-   )
    (song_length 280909)
    (solo
       (guitar)
@@ -27641,6 +27558,24 @@ missing_song_data
    )
    (extra_authoring disc_update)
 )
+(rockyoursocks
+   (vocal_tonic_note 4)
+   (song_tonality 0)
+   (author
+      "Harmonix"
+   )
+   (song_id 1005618)
+   (song
+      (vocal_parts 2)
+   )
+   (extra_authoring disc_update)
+   (song_length 210909)
+   (solo
+      (guitar)
+   )
+   (format 10)
+   (game_origin rb1_dlc)
+)
 (rollwiththechanges
    (vocal_tonic_note 0)
    (song_tonality 0)
@@ -27720,6 +27655,25 @@ missing_song_data
       (vocal_parts 3)
    )
    (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 223)
+      (guitar 265)
+      (bass 220)
+      (vocals 159)
+      (real_guitar 299)
+      (real_bass 293)
+      (band 254)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "Brandunce, Russ T Sprinkler"
+   )
    (song_length 160909)
    (format 10)
    (game_origin rb1_dlc)
@@ -28949,6 +28903,25 @@ missing_song_data
       (vocal_parts 3)
    )
    (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 360)
+      (guitar 280)
+      (bass 280)
+      (vocals 160)
+      (real_guitar 322)
+      (real_bass 298)
+      (band 270)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "WarGod"
+   )
    (song_id 1005007)
    (preview 42000 72000)
    (song_length 222727)
@@ -29133,6 +29106,24 @@ missing_song_data
       "Gish"
    )
    (album_track_number 2)
+)
+(sixsixsix
+   (author
+      "Harmonix"
+   )
+   (song_id 1005665)
+   (song
+      (vocal_parts 3)
+   )
+   (extra_authoring disc_update)
+   (song_length 281363)
+   (solo
+      (guitar)
+   )
+   (format 10)
+   (game_origin rb1_dlc)
+   (year_released 1982)
+   (year_recorded 2009)
 )
 (sixteen
    (vocal_tonic_note 9)
@@ -29501,7 +29492,7 @@ missing_song_data
       (vocals 80)
       (keys 170)
       (real_keys 170)
-      (real_guitar 385)
+      (real_guitar 485)
       (real_bass 215)
       (band 230)
    )
@@ -29608,6 +29599,25 @@ missing_song_data
       (vocal_parts 3)
    )
    (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 236)
+      (guitar 206)
+      (bass 198)
+      (vocals 231)
+      (real_guitar 255)
+      (real_bass 224)
+      (band 235)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "WarGod"
+   )
    (song_id 1005309)
    (preview 35700 65700)
    (song_length 234090)
@@ -32334,6 +32344,23 @@ missing_song_data
    (game_origin rb1_dlc)
    (rating 2)
 )
+(thewagon
+   (author
+      "Harmonix"
+   )
+   (song_id 1005642)
+   (song
+      (vocal_parts 3)
+   )
+   (extra_authoring disc_update)
+   (song_length 299090)
+   (solo
+      (guitar)
+   )
+   (format 10)
+   (game_origin rb1_dlc)
+   (rating 2)
+)
 (thewaitinglive
    (vocal_tonic_note 2)
    (song_tonality 0)
@@ -32633,6 +32660,25 @@ missing_song_data
       (vocal_parts 2)
    )
    (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 262)
+      (guitar 231)
+      (bass 238)
+      (vocals 146)
+      (real_guitar 350)
+      (real_bass 313)
+      (band 378)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "WarGod"
+   )
    (song_id 1005386)
    (song_length 233181)
    (solo
@@ -32672,6 +32718,19 @@ missing_song_data
    (format 10)
    (game_origin rb1_dlc)
    (rating 1)
+)
+(thisisthirteen
+   (author
+      "Harmonix"
+   )
+   (song_id 1005670)
+   (extra_authoring disc_update)
+   (song_length 368636)
+   (solo
+      (guitar)
+   )
+   (format 10)
+   (game_origin rb1_dlc)
 )
 (thisiswar
    (vocal_tonic_note 3)
@@ -33872,6 +33931,14 @@ missing_song_data
    (format 10)
    (game_origin rb1_dlc)
 )
+(valleysofneptune
+   (author
+      "Harmonix"
+   )
+   (year_released 1969)
+   (year_recorded 2010)
+   (format 10)
+)
 (vengeanceismine
    (vocal_tonic_note 2)
    (song_tonality 1)
@@ -34815,6 +34882,25 @@ missing_song_data
       (vocal_parts 2)
    )
    (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 327)
+      (guitar 309)
+      (bass 263)
+      (vocals 212)
+      (real_guitar 359)
+      (real_bass 285)
+      (band 316)
+   )
+   (real_guitar_tuning
+      (-2 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "WarGod"
+   )
    (song_length 305454)
    (solo
       (vocal_percussion)
@@ -37021,6 +37107,8 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (genre alternative)
+   (song_id 277)
    (song_length 290181)
    (solo
       (guitar vocal_percussion)
@@ -37120,19 +37208,8 @@ missing_song_data
       (keys 204)
       (real_keys 214)
       (band 174)
-      (real_guitar 208)
-      (real_bass 325)
-   )
-   (real_guitar_tuning
-      (0 0 0 0 0 0)
-   )
-   (real_bass_tuning
-      (0 0 0 0)
    )
    (version 30)
-   (strings_author
-      "JohnSmith"
-   )
    (keys_author
       "RK"
    )
@@ -37553,6 +37630,11 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (year_released 2009)
+   (album_name
+      "Bang Camaro II"
+   )
+   (album_track_number 2)
    (song
       (vocal_parts 3)
    )
@@ -38103,6 +38185,27 @@ missing_song_data
       (vocal_parts 3)
    )
    (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 383)
+      (guitar 331)
+      (bass 370)
+      (vocals 265)
+      (keys 0)
+      (real_guitar 400)
+      (real_bass 350)
+      (real_keys 0)
+      (band 440)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "MatthNerd"
+   )
 )
 (rocknme
    (vocal_tonic_note 9)
@@ -38343,6 +38446,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (song_id 313)
    (extra_authoring disc_update)
    (song_length 253583)
    (solo
@@ -38578,27 +38682,6 @@ missing_song_data
       (vocal_parts 2)
    )
    (extra_authoring disc_update)
-   (upgrade_version 1)
-   (rank
-      (drum 179)
-      (guitar 108)
-      (bass 255)
-      (vocals 152)
-      (keys 0)
-      (real_keys 0)
-      (band 179)
-      (real_guitar 176)
-      (real_bass 181)
-   )
-   (real_guitar_tuning
-      (0 0 0 0 0 0)
-   )
-   (real_bass_tuning
-      (0 0 0 0)
-   )
-   (strings_author
-      "JohnSmith"
-   )
 )
 (uncontrollableurge
    (vocal_tonic_note 9)
@@ -39676,6 +39759,25 @@ missing_song_data
       (vocal_parts 3)
    )
    (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 247)
+      (guitar 188)
+      (bass 185)
+      (vocals 159)
+      (real_guitar 276)
+      (real_bass 212)
+      (band 190)
+   )
+   (real_guitar_tuning
+      (-2 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (-2 0 0 0)
+   )
+   (strings_author
+      "MatthNerd"
+   )
    (song_length 251363)
    (solo
       (guitar)
@@ -40071,52 +40173,8 @@ missing_song_data
    )
    (song
       (vocal_parts 3)
-      (tracks
-         (
-            (drum
-               (0 1 2 3 4)
-            )
-            (bass
-               (5)
-            )
-            (guitar
-               (6 7)
-            )
-            (vocals
-               (8 9)
-            )
-            (keys
-               (10 11)
-            )
-         )
-      )
    )
    (extra_authoring disc_update)
-   (upgrade_version 1)
-   (rank
-      (drum 119)
-      (guitar 136)
-      (bass 140)
-      (vocals 160)
-      (keys 211)
-      (real_guitar 1)
-      (real_bass 1)
-      (real_keys 211)
-      (band 126)
-   )
-   (real_guitar_tuning
-      (0 0 0 0 0 0)
-   )
-   (real_bass_tuning
-      (0 0 0 0)
-   )
-   (keys_author
-      "JohnSmith"
-   )
-   (strings_author
-      "JohnSmith"
-   )
-   (version 30)
    (song_length 244090)
    (format 10)
 )
@@ -40819,6 +40877,13 @@ missing_song_data
    )
    (format 10)
 )
+(20thcenturyboy
+   (author
+      "Harmonix"
+   )
+   (year_released 1973)
+   (year_recorded 1994)
+)
 (25or6to4
    (author
       "Harmonix"
@@ -40939,6 +41004,24 @@ missing_song_data
       "Harmonix"
    )
 )
+(getupstandup
+   (author
+      "Harmonix"
+   )
+   (year_released 1973)
+   (year_recorded 1984)
+   (album_name
+      "Burnin'"
+   )
+   (album_track_number 1)
+)
+(goodvibrationslive
+   (author
+      "Harmonix"
+   )
+   (year_released 1968)
+   (year_recorded 1970)
+)
 (heartofglass
    (author
       "Harmonix"
@@ -40963,6 +41046,18 @@ missing_song_data
    (author
       "Harmonix"
    )
+)
+(ifeelgoodalt
+   (author
+      "Harmonix"
+   )
+   (year_released 1975)
+   (year_recorded 2010)
+   (album_art 1)
+   (album_name
+      "Sex Machine Today"
+   )
+   (album_track_number 2)
 )
 (iloverocknroll
    (author
@@ -41184,6 +41279,16 @@ missing_song_data
       "Harmonix"
    )
 )
+(thepoweroflove
+   (author
+      "Harmonix"
+   )
+   (year_released 1985)
+   (album_name
+      "Back to the Future: Music from the Motion Picture Soundtrack"
+   )
+   (album_track_number 1)
+)
 (thisbastardslife
    (author
       "Harmonix"
@@ -41230,6 +41335,12 @@ missing_song_data
    (game_origin rb3dlc)
    (author
       "Harmonix"
+   )
+   (name
+      "Airplanes (ft. Hayley Williams)"
+   )
+   (artist
+      "B.o.B"
    )
 )
 (alittlerespect
@@ -41967,28 +42078,6 @@ missing_song_data
    (author
       "Harmonix"
    )
-   (extra_authoring disc_update)
-   (upgrade_version 1)
-   (rank
-      (drum 248)
-      (guitar 115)
-      (bass 177)
-      (vocals 347)
-      (keys 338)
-      (real_guitar 150)
-      (real_bass 150)
-      (real_keys 348)
-      (band 242)
-   )
-   (real_guitar_tuning
-      (-1 -1 -1 -1 -1 -1)
-   )
-   (real_bass_tuning
-      (-1 -1 -1 -1)
-   )
-   (strings_author
-      "JohnSmith"
-   )
 )
 (fireohio
    (game_origin rb3dlc)
@@ -42481,6 +42570,28 @@ missing_song_data
       "Crush"
    )
    (album_track_number 1)
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 141)
+      (guitar 197)
+      (bass 201)
+      (vocals 185)
+      (keys 215)
+      (real_guitar 183)
+      (real_bass 229)
+      (real_keys 176)
+      (band 175)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (-2 0 0 0)
+   )
+   (strings_author
+      "Aloquendiar"
+   )
 )
 (itsnotover
    (game_origin rb3dlc)
@@ -44192,6 +44303,28 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 108)
+      (guitar 192)
+      (bass 132)
+      (vocals 275)
+      (keys 298)
+      (real_guitar 184)
+      (real_bass 102)
+      (real_keys 321)
+      (band 208)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "JDK"
+   )
 )
 (voodoochildlive
    (game_origin rb3dlc)
@@ -44609,6 +44742,7 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (extra_authoring disc_update)
    (upgrade_version 1)
    (rank
       (drum 220)
@@ -45511,6 +45645,53 @@ missing_song_data
    (author
       "Harmonix, Rhythm Authors"
    )
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (song
+      (tracks
+         (
+            (drum
+               (0 1)
+            )
+            (bass
+               (2 3)
+            )
+            (guitar
+               (4 5)
+            )
+            (vocals
+               (6 7)
+            )
+            (keys
+               (8 9)
+            )
+         )
+      )
+   )
+   (rank
+      (drum 133)
+      (guitar 102)
+      (bass 183)
+      (vocals 405)
+      (keys 153)
+      (real_keys 153)
+      (real_guitar 150)
+      (real_bass 208)
+      (band 167)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (keys_author
+      "gospeedgo11"
+   )
+   (strings_author
+      "gospeedgo11"
+   )
+   (version 30)
 )
 (allthatshewants
    (author
@@ -45932,7 +46113,6 @@ missing_song_data
    (author
       "Harmonix, Rhythm Authors"
    )
-   (extra_authoring disc_update)
 )
 (cowboysfromhelllive
    (author
@@ -46253,6 +46433,42 @@ missing_song_data
    (author
       "Harmonix, Rhythm Authors"
    )
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (song
+      (tracks
+         (
+            (drum
+               (0 1)
+            )
+            (bass
+               (2 3)
+            )
+            (guitar
+               (4 5)
+            )
+            (vocals
+               (6 7)
+            )
+            (keys
+               (8 9)
+            )
+         )
+      )
+   )
+   (rank
+      (drum 265)
+      (guitar 240)
+      (bass 285)
+      (vocals 365)
+      (keys 340)
+      (real_keys 340)
+      (band 265)
+   )
+   (keys_author
+      "JIManji, Ultimate_MANG0, BowlsforRick"
+   )
+   (version 30)
 )
 (hatemyself
    (author
@@ -46317,6 +46533,53 @@ missing_song_data
    (author
       "Harmonix, Rhythm Authors"
    )
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (song
+      (tracks
+         (
+            (drum
+               (0 1)
+            )
+            (bass
+               (2 3)
+            )
+            (guitar
+               (4 5)
+            )
+            (vocals
+               (6 7)
+            )
+            (keys
+               (8 9)
+            )
+         )
+      )
+   )
+   (rank
+      (drum 340)
+      (guitar 360)
+      (bass 229)
+      (vocals 225)
+      (keys 211)
+      (real_keys 211)
+      (real_guitar 384)
+      (real_bass 267)
+      (band 265)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (keys_author
+      "gospeedgo11"
+   )
+   (strings_author
+      "gospeedgo11"
+   )
+   (version 30)
 )
 (heirapparent
    (author
@@ -46421,7 +46684,7 @@ missing_song_data
       "Harmonix, Rhythm Authors"
    )
 )
-(idontwannamissathing
+(idontwanttomissathing
    (author
       "Harmonix, Rhythm Authors"
    )
@@ -46944,6 +47207,42 @@ missing_song_data
    (author
       "Harmonix, Rhythm Authors"
    )
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (song
+      (tracks
+         (
+            (drum
+               (0 1)
+            )
+            (bass
+               (2 3)
+            )
+            (guitar
+               (4 5)
+            )
+            (vocals
+               (6 7)
+            )
+            (keys
+               (8 9)
+            )
+         )
+      )
+   )
+   (rank
+      (drum 295)
+      (guitar 345)
+      (bass 330)
+      (vocals 245)
+      (keys 1)
+      (real_keys 1)
+      (band 280)
+   )
+   (keys_author
+      "EdTanguy"
+   )
+   (version 30)
 )
 (riptide
    (author
@@ -47263,6 +47562,53 @@ missing_song_data
    (author
       "Harmonix, Rhythm Authors"
    )
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (song
+      (tracks
+         (
+            (drum
+               (0 1)
+            )
+            (bass
+               (2 3)
+            )
+            (guitar
+               (4 5)
+            )
+            (vocals
+               (6 7)
+            )
+            (keys
+               (8 9)
+            )
+         )
+      )
+   )
+   (rank
+      (drum 189)
+      (guitar 199)
+      (bass 178)
+      (vocals 316)
+      (keys 153)
+      (real_keys 153)
+      (real_guitar 208)
+      (real_bass 150)
+      (band 234)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (keys_author
+      "gospeedgo11"
+   )
+   (strings_author
+      "gospeedgo11"
+   )
+   (version 30)
 )
 (thesoundofsilence
    (author
@@ -47398,6 +47744,7 @@ missing_song_data
    (author
       "Harmonix, Rhythm Authors"
    )
+   (extra_authoring disc_update)
 )
 (wakingupinvegas
    (author
@@ -48153,6 +48500,8 @@ missing_song_data
    (author
       "Harmonix"
    )
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 7)
 )
 (lovelyrita
    (author
@@ -49181,6 +49530,7 @@ missing_song_data
    (author
       "TheMainDrag"
    )
+   (album_track_number 1)
    (extra_authoring disc_update)
    (upgrade_version 1)
 )
@@ -49407,6 +49757,24 @@ missing_song_data
    )
    (extra_authoring disc_update)
    (upgrade_version 1)
+   (rank
+      (drum 133)
+      (guitar 194)
+      (bass 220)
+      (vocals 180)
+      (real_guitar 165)
+      (real_bass 5)
+      (band 219)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "ALBATROSS"
+   )
 )
 (UGC_5001192
    (game_origin ugc1)
@@ -49983,27 +50351,6 @@ missing_song_data
    (vocal_tonic_note 4)
    (song_tonality 1)
    (extra_authoring disc_update)
-   (upgrade_version 1)
-   (rank
-      (drum 133)
-      (guitar 145)
-      (bass 166)
-      (vocals 180)
-      (keys 0)
-      (real_keys 0)
-      (band 219)
-      (real_guitar 208)
-      (real_bass 150)
-   )
-   (real_guitar_tuning
-      (0 0 0 0 0 0)
-   )
-   (real_bass_tuning
-      (0 0 0 0)
-   )
-   (strings_author
-      "JohnSmith"
-   )
 )
 (UGC_5001549
    (game_origin ugc1)
@@ -50295,6 +50642,9 @@ missing_song_data
    (game_origin ugc1)
    (author
       "TheAuthority"
+   )
+   (name
+      "You're a Wolf"
    )
    (album_name
       "Leaves in the River"
@@ -53826,6 +54176,9 @@ missing_song_data
    (game_origin ugc1)
    (author
       "GamersBeatsInc"
+   )
+   (name
+      "Welcome to My World"
    )
 )
 (UGC_5003761
@@ -57712,6 +58065,28 @@ missing_song_data
    (author
       "GamersBeatsInc"
    )
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 345)
+      (guitar 221)
+      (bass 1)
+      (vocals 279)
+      (keys 443)
+      (real_keys 443)
+      (real_guitar 338)
+      (real_bass 77)
+      (band 267)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "WarGod, Carl Mylo, JDK"
+   )
 )
 (UGC_5006120
    (game_origin ugc2)
@@ -59153,6 +59528,28 @@ missing_song_data
    (author
       "Rhythm Authors"
    )
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 448)
+      (guitar 409)
+      (bass 436)
+      (vocals 1)
+      (keys 0)
+      (real_keys 0)
+      (real_guitar 500)
+      (real_bass 500)
+      (band 345)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "MatthNerd"
+   )
 )
 (UGC_5007216
    (game_origin ugc2)
@@ -60586,6 +60983,28 @@ missing_song_data
    (game_origin ugc2)
    (author
       "AGLSolutions"
+   )
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 178)
+      (guitar 176)
+      (bass 228)
+      (vocals 175)
+      (keys 1)
+      (real_keys 1)
+      (real_guitar 340)
+      (real_bass 352)
+      (band 215)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "ataeaf"
    )
 )
 (UGC_5008432
@@ -63426,6 +63845,26 @@ missing_song_data
    (author
       "ThatAuthoringGroup"
    )
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 208)
+      (guitar 247)
+      (bass 166)
+      (vocals 180)
+      (real_guitar 105)
+      (real_bass 75)
+      (band 274)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "RK"
+   )
 )
 (UGC_5010831
    (game_origin ugc2)
@@ -64019,6 +64458,28 @@ missing_song_data
    (game_origin ugc2)
    (author
       "ThatAuthoringGroup"
+   )
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (rank
+      (drum 242)
+      (guitar 221)
+      (bass 135)
+      (vocals 132)
+      (keys 269)
+      (real_keys 327)
+      (real_guitar 195)
+      (real_bass 236)
+      (band 243)
+   )
+   (real_guitar_tuning
+      (0 0 0 0 0 0)
+   )
+   (real_bass_tuning
+      (0 0 0 0)
+   )
+   (strings_author
+      "WarGod"
    )
 )
 (UGC_5011496
@@ -64824,32 +65285,1846 @@ missing_song_data
       "MFX"
    )
 )
+(screamingforvengeance
+   (name
+      "Screaming for Vengeance"
+   )
+)
+(21her
+   (genre rbsoulfunk)
+   (drum_bank sfx/kit03_bank.milo)
+   (anim_tempo 16)
+   (vocal_tonic_note 10)
+)
+(allireallywannado
+   (genre rbsoulfunk)
+   (drum_bank sfx/kit03_bank.milo)
+   (anim_tempo 16)
+   (vocal_tonic_note 7)
+)
+(applause
+   (genre popdanceelectronic)
+   (anim_tempo 64)
+   (vocal_tonic_note 8)
+)
+(ayo
+   (genre popdanceelectronic)
+   (anim_tempo 64)
+   (vocal_tonic_note 10)
+   (extra_authoring disc_update)
+)
+(badguy
+   (genre popdanceelectronic)
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 7)
+)
+(boyfriend
+   (genre popdanceelectronic)
+   (vocal_tonic_note 10)
+)
+(brickhouse
+   (genre rbsoulfunk)
+   (vocal_tonic_note 9)
+)
+(broken3
+   (genre popdanceelectronic)
+   (tuning_offset_cents 30.00)
+   (vocal_tonic_note 0)
+)
+(cannedhead
+   (genre rbsoulfunk)
+)
+(cheapthrills
+   (genre popdanceelectronic)
+   (vocal_tonic_note 6)
+)
+(cityofangels
+   (genre hiphoprap)
+   (vocal_tonic_note 0)
+)
+(comeandgo
+   (genre hiphoprap)
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 0)
+)
+(cradles
+   (genre hiphoprap)
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 1)
+)
+(dontstartnow
+   (genre popdanceelectronic)
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 11)
+)
+(falling2
+   (genre popdanceelectronic)
+   (vocal_tonic_note 10)
+)
+(goodthingsfallapart
+   (genre popdanceelectronic)
+   (drum_bank sfx/kit05_bank.milo)
+   (anim_tempo 16)
+   (vocal_tonic_note 7)
+)
+(heartbeatsong
+   (genre popdanceelectronic)
+   (vocal_tonic_note 6)
+)
+(highermendes
+   (genre popdanceelectronic)
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 10)
+)
+(ily
+   (genre popdanceelectronic)
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 11)
+)
+(ireallylikeyou
+   (genre popdanceelectronic)
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 5)
+)
+(lovebrandnew
+   (genre popdanceelectronic)
+   (drum_bank sfx/kit05_bank.milo)
+   (anim_tempo 16)
+   (vocal_tonic_note 11)
+)
+(montero
+   (genre hiphoprap)
+   (anim_tempo 64)
+   (vocal_tonic_note 8)
+)
+(numb3
+   (genre popdanceelectronic)
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 3)
+)
 (ole
    (name
       "¡Olé!"
    )
    (encoding latin1)
+   (vocal_tonic_note 0)
 )
-(ayo
+(physical
+   (genre popdanceelectronic)
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 4)
+)
+(royals
+   (genre popdanceelectronic)
+   (anim_tempo 16)
+   (vocal_tonic_note 2)
+)
+(sellout
+   (genre reggaeska)
+   (anim_tempo 64)
+   (vocal_tonic_note 1)
+)
+(shout2
+   (genre rbsoulfunk)
+   (drum_bank sfx/kit03_bank.milo)
+   (anim_tempo 64)
+   (tuning_offset_cents 15.00)
+   (vocal_tonic_note 6)
+)
+(sorry_bieber
+   (genre popdanceelectronic)
+   (vocal_tonic_note 3)
    (extra_authoring disc_update)
 )
+(speedfighter
+   (genre popdanceelectronic)
+   (vocal_tonic_note 4)
+)
+(starships
+   (genre popdanceelectronic)
+   (vocal_tonic_note 2)
+)
+(steviesees
+   (genre hiphoprap)
+)
+(superfreakygirl
+   (genre popdanceelectronic)
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 2)
+)
+(takeonme2
+   (genre reggaeska)
+   (drum_bank sfx/kit04_bank.milo)
+   (anim_tempo 64)
+   (vocal_tonic_note 9)
+)
+(thebadtouch
+   (genre popdanceelectronic)
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 0)
+)
+(theedgeofglory
+   (genre popdanceelectronic)
+   (vocal_tonic_note 10)
+)
+(thegreatest
+   (genre popdanceelectronic)
+   (vocal_tonic_note 0)
+)
+(thereforeiam
+   (genre popdanceelectronic)
+   (drum_bank sfx/kit05_bank.milo)
+   (anim_tempo 16)
+   (vocal_tonic_note 11)
+)
+(thisishowwedoit
+   (genre hiphoprap)
+   (vocal_tonic_note 5)
+   (extra_authoring disc_update)
+)
+(timeforcrime
+   (genre popdanceelectronic)
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 7)
+)
+(vinyl
+   (genre popdanceelectronic)
+   (drum_bank sfx/kit02_bank.milo)
+   (vocal_tonic_note 3)
+)
+(wakemeup2
+   (genre popdanceelectronic)
+   (vocal_tonic_note 7)
+)
+(wanttowantme
+   (genre popdanceelectronic)
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 3)
+)
+(wearefamily
+   (genre rbsoulfunk)
+   (drum_bank sfx/kit03_bank.milo)
+   (tuning_offset_cents -30.00)
+   (vocal_tonic_note 8)
+)
+(whatdoyoumean
+   (genre popdanceelectronic)
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 8)
+)
+(neverletemholdyaback
+   (album_name
+      "Waylaid in the Melée"
+   )
+   (encoding latin1)
+   (vocal_tonic_note 2)
+)
+(rudeboys
+   (genre hiphoprap)
+   (vocal_tonic_note 7)
+)
+(noplaceforme
+   (anim_tempo 64)
+   (vocal_tonic_note 7)
+)
+(painkiller2
+   (anim_tempo 16)
+   (vocal_tonic_note 6)
+)
+(shadow
+   (vocal_tonic_note 2)
+)
+(sink
+   (vocal_tonic_note 7)
+)
+(skydiver
+   (anim_tempo 16)
+   (vocal_tonic_note 2)
+)
+(somp
+   (vocal_tonic_note 4)
+)
+(thesehands
+   (anim_tempo 64)
+   (vocal_tonic_note 7)
+)
+(trueconfession
+   (vocal_tonic_note 2)
+)
+(10000hours
+   (anim_tempo 16)
+   (vocal_tonic_note 10)
+)
+(100baddays
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 10)
+)
+(abcdefu
+   (vocal_tonic_note 4)
+)
+(aclockworkexpectation
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+)
+(addicted
+   (vocal_tonic_note 1)
+)
+(addisonrae
+   (vocal_tonic_note 2)
+)
+(adoreyou2
+   (vocal_tonic_note 8)
+)
+(adventureofalifetime
+   (band_fail_cue band_fail_heavy.cue)
+   (vocal_tonic_note 9)
+)
+(aintnoking
+   (vocal_tonic_note 9)
+)
+(alittlebitbetter
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 4)
+)
+(alittlebitoff
+   (vocal_tonic_note 0)
+)
+(alittlewild
+   (vocal_tonic_note 1)
+)
+(alive2
+   (vocal_tonic_note 2)
+)
+(alivewiththeglory
+   (vocal_tonic_note 9)
+)
+(allforyou
+   (vocal_tonic_note 8)
+)
+(alligator
+   (vocal_tonic_note 3)
+)
+(allmyfavoritesongs2
+   (vocal_tonic_note 1)
+)
+(alltheragebackhome
+   (anim_tempo 64)
+   (band_fail_cue band_fail_rock.cue)
+   (vocal_tonic_note 0)
+)
+(allthesethingsthativedone
+   (vocal_tonic_note 6)
+)
+(allthewaystay
+   (vocal_tonic_note 7)
+)
+(andsoitwent
+   (vocal_tonic_note 8)
+)
+(angelsanddemons
+   (vocal_tonic_note 0)
+)
+(animals2
+   (anim_tempo 16)
+   (vocal_tonic_note 1)
+)
+(antisocialist
+   (vocal_tonic_note 6)
+)
+(anythingwasbetter
+   (anim_tempo 64)
+   (vocal_tonic_note 11)
+)
+(aok
+   (anim_tempo 64)
+   (vocal_tonic_note 11)
+)
+(askyfullofstars
+   (anim_tempo 64)
+   (vocal_tonic_note 6)
+)
+(astronautourlastnight
+   (vocal_tonic_note 11)
+)
+(attention
+   (vocal_tonic_note 3)
+)
+(backtome
+   (vocal_tonic_note 2)
+)
 (backwoodsco
+   (band_fail_cue band_fail_rock.cue)
+   (vocal_tonic_note 6)
    (extra_authoring disc_update)
 )
 (badcatholics
+   (vocal_tonic_note 0)
    (extra_authoring disc_update)
 )
+(baddecisions
+   (vocal_tonic_note 0)
+)
+(badidea
+   (anim_tempo 16)
+   (vocal_tonic_note 3)
+)
+(bang
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 1)
+)
+(bathcounty
+   (vocal_tonic_note 7)
+)
 (beatsports
+   (drum_bank sfx/kit05_bank.milo)
+   (anim_tempo 64)
    (extra_authoring disc_update)
 )
 (bestsongever
+   (vocal_tonic_note 1)
    (extra_authoring disc_update)
+)
+(bettertogether
+   (drum_bank sfx/kit03_bank.milo)
+   (vocal_tonic_note 5)
+)
+(bizarrelovetriangle
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 7)
+)
+(blackearth
+   (drum_bank sfx/kit03_bank.milo)
+   (anim_tempo 16)
+   (vocal_tonic_note 4)
 )
 (blackseas
+   (vocal_tonic_note 2)
    (extra_authoring disc_update)
 )
+(blameitonmyyouth
+   (vocal_tonic_note 3)
+)
+(blindleadingtheblind
+   (vocal_tonic_note 6)
+)
+(blisterinthesun
+   (drum_bank sfx/kit03_bank.milo)
+   (anim_tempo 64)
+   (vocal_tonic_note 7)
+)
+(bloodforthebloodgod
+   (vocal_tonic_note 1)
+)
+(bloodhands
+   (vocal_tonic_note 0)
+)
+(blownaway
+   (vocal_tonic_note 1)
+)
+(bluemonday2
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 3)
+)
+(blueonblack
+   (vocal_tonic_note 2)
+)
+(bodylikethat
+   (vocal_tonic_note 6)
+)
+(bodytalks
+   (anim_tempo 16)
+   (vocal_tonic_note 3)
+)
+(bonnie
+   (vocal_tonic_note 4)
+)
+(boredtodeath
+   (vocal_tonic_note 2)
+)
+(bornagaintomorrow
+   (vocal_tonic_note 3)
+)
+(bornintheheat
+   (anim_tempo 64)
+   (vocal_tonic_note 9)
+)
+(brandyyoureafinegirl
+   (drum_bank sfx/kit03_bank.milo)
+   (vocal_tonic_note 4)
+)
+(brassic
+   (vocal_tonic_note 1)
+)
 (breakfastattiffanys
+   (vocal_tonic_note 2)
    (extra_authoring disc_update)
+)
+(breakinup
+   (vocal_tonic_note 2)
+)
+(burn2
+   (anim_tempo 64)
+   (vocal_tonic_note 1)
+)
+(burninitdown
+   (drum_bank sfx/kit05_bank.milo)
+   (anim_tempo 64)
+   (vocal_tonic_note 6)
+)
+(burymetonight
+   (anim_tempo 16)
+   (vocal_tonic_note 4)
+)
+(california
+   (band_fail_cue band_fail_rock.cue)
+   (vocal_tonic_note 9)
+)
+(californiadreamin
+   (vocal_tonic_note 3)
+)
+(callmecrazy
+   (vocal_tonic_note 10)
+)
+(cannedheat
+   (vocal_tonic_note 2)
+)
+(chaiselongue
+   (vocal_tonic_note 7)
+)
+(champion
+   (anim_tempo 64)
+   (vocal_tonic_note 8)
+)
+(change
+   (vocal_tonic_note 9)
+)
+(cheerleader
+   (vocal_tonic_note 5)
+)
+(chickenfried
+   (vocal_tonic_note 6)
+)
+(churchbells
+   (vocal_tonic_note 2)
+)
+(circles
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+)
+(circles3
+   (anim_tempo 64)
+   (vocal_tonic_note 5)
+)
+(cityofthedead
+   (vocal_tonic_note 0)
+)
+(classlessact
+   (drum_bank sfx/kit02_bank.milo)
+   (anim_tempo 64)
+   (vocal_tonic_note 7)
+)
+(cocoon
+   (vocal_tonic_note 10)
+   (extra_authoring disc_update)
+)
+(colors
+   (vocal_tonic_note 6)
+)
+(comforteagle
+   (vocal_tonic_note 11)
+)
+(connection
+   (vocal_tonic_note 10)
+)
+(cosmicthrill
+   (anim_tempo 16)
+   (vocal_tonic_note 8)
+)
+(crashintome
+   (vocal_tonic_note 4)
+)
+(cumbersome
+   (anim_tempo 64)
+   (vocal_tonic_note 6)
+)
+(dangerous
+   (vocal_tonic_note 2)
+)
+(deadmemories
+   (drum_bank sfx/kit04_bank.milo)
+   (vocal_tonic_note 5)
+)
+(deathbyrockandroll
+   (vocal_tonic_note 4)
+)
+(deletemyself2
+   (anim_tempo 64)
+   (vocal_tonic_note 4)
+)
+(desire
+   (band_fail_cue band_fail_rock.cue)
+   (vocal_tonic_note 3)
+   (extra_authoring disc_update)
+)
+(devilonmyshoulder
+   (vocal_tonic_note 1)
+)
+(devilsradio
+   (vocal_tonic_note 0)
+)
+(die4u
+   (vocal_tonic_note 2)
+)
+(dieouthere
+   (vocal_tonic_note 4)
+)
+(differentcolors
+   (vocal_tonic_note 5)
+)
+(dirtroadanthem
+   (vocal_tonic_note 2)
+)
+(distance
+   (vocal_tonic_note 7)
+)
+(donotdisturb
+   (vocal_tonic_note 2)
+)
+(dontfencemein
+   (anim_tempo 64)
+   (vocal_tonic_note 8)
+)
+(dontwannafight
+   (band_fail_cue band_fail_rock.cue)
+   (vocal_tonic_note 10)
+   (extra_authoring disc_update)
+)
+(down3
+   (anim_tempo 64)
+   (vocal_tonic_note 9)
+)
+(downinahole
+   (vocal_tonic_note 8)
+   (extra_authoring disc_update)
+)
+(downtothedevil
+   (anim_tempo 16)
+   (vocal_tonic_note 2)
+)
+(doyourworst
+   (vocal_tonic_note 4)
+)
+(dreaming
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+)
+(dreams2
+   (vocal_tonic_note 1)
+)
+(dreams3
+   (vocal_tonic_note 4)
+)
+(drunk
+   (vocal_tonic_note 5)
+)
+(endoftheworld
+   (vocal_tonic_note 2)
+)
+(euphoria
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+)
+(everymorning
+   (vocal_tonic_note 7)
+)
+(everythingyouwant
+   (vocal_tonic_note 3)
+)
+(fallapart
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 5)
+)
+(fartoonear
+   (vocal_tonic_note 4)
+)
+(fatalillusion
+   (vocal_tonic_note 9)
+)
+(fatherofall
+   (vocal_tonic_note 1)
+)
+(feelitstill
+   (anim_tempo 64)
+   (vocal_tonic_note 1)
+)
+(figureitout
+   (vocal_tonic_note 4)
+)
+(first
+   (anim_tempo 16)
+   (band_fail_cue band_fail_rock.cue)
+   (vocal_tonic_note 9)
+)
+(flagpolesitta
+   (vocal_tonic_note 2)
+)
+(flavoroftheweak
+   (vocal_tonic_note 10)
+)
+(float
+   (vocal_tonic_note 2)
+)
+(followmedown
+   (vocal_tonic_note 3)
+)
+(forgetabouttomorrow
+   (vocal_tonic_note 0)
+   (extra_authoring disc_update)
+)
+(foundoutaboutyou
+   (vocal_tonic_note 7)
+   (extra_authoring disc_update)
+)
+(freaks
+   (anim_tempo 64)
+   (vocal_tonic_note 9)
+)
+(futureblind
+   (vocal_tonic_note 2)
+)
+(gepetto
+   (vocal_tonic_note 9)
+)
+(girlscoutcookies
+   (anim_tempo 64)
+   (vocal_tonic_note 10)
+)
+(girlslikeyou
+   (anim_tempo 64)
+   (vocal_tonic_note 0)
+)
+(girlsmakemewannadie
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+)
+(giveyourselfatry
+   (anim_tempo 64)
+   (vocal_tonic_note 8)
+)
+(glasshouse
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+)
+(gloria
+   (vocal_tonic_note 11)
+)
+(goinghometoaparty
+   (vocal_tonic_note 5)
+)
+(golden
+   (vocal_tonic_note 4)
+)
+(goldontheceiling
+   (vocal_tonic_note 2)
+)
+(gotyoursix
+   (vocal_tonic_note 2)
+)
+(graffiti
+   (anim_tempo 64)
+   (vocal_tonic_note 4)
+)
+(grandcanyon
+   (anim_tempo 64)
+   (vocal_tonic_note 7)
+)
+(greatestofalltime
+   (vocal_tonic_note 0)
+)
+(handclap
+   (vocal_tonic_note 0)
+)
+(happy2
+   (anim_tempo 64)
+   (vocal_tonic_note 5)
+   (extra_authoring disc_update)
+)
+(happysong
+   (vocal_tonic_note 0)
+)
+(harmonyhall
+   (vocal_tonic_note 11)
+)
+(headsweat
+   (vocal_tonic_note 7)
+)
+(heartbreaker2
+   (vocal_tonic_note 0)
+)
+(heartbreakofthecentury
+   (anim_tempo 64)
+   (vocal_tonic_note 3)
+   (extra_authoring disc_update)
+)
+(heatabove
+   (vocal_tonic_note 0)
+)
+(heavenknows
+   (vocal_tonic_note 2)
+)
+(helpimalive
+   (vocal_tonic_note 5)
+)
+(hereandnow
+   (vocal_tonic_note 4)
+)
+(herestothenight
+   (vocal_tonic_note 7)
+)
+(heyjealousy
+   (vocal_tonic_note 9)
+   (extra_authoring disc_update)
+)
+(highhopes
+   (anim_tempo 64)
+   (vocal_tonic_note 5)
+)
+(highsociety
+   (vocal_tonic_note 11)
+)
+(historyofviolence
+   (vocal_tonic_note 9)
+)
+(holdinmeback
+   (vocal_tonic_note 11)
+)
+(holdmyhand
+   (vocal_tonic_note 0)
+)
+(holdon
+   (vocal_tonic_note 5)
+)
+(homegrown
+   (vocal_tonic_note 6)
+   (extra_authoring disc_update)
+)
+(homesick
+   (vocal_tonic_note 4)
+)
+(honeyimgood
+   (vocal_tonic_note 9)
+   (extra_authoring disc_update)
+)
+(hook
+   (vocal_tonic_note 9)
+)
+(hotelkey
+   (vocal_tonic_note 11)
+)
+(houseparty
+   (vocal_tonic_note 3)
+)
+(hurricane
+   (vocal_tonic_note 9)
+)
+(hurt
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 9)
+)
+(hymnfortheweekend
+   (anim_tempo 16)
+   (vocal_tonic_note 0)
+)
+(iaintworried
+   (vocal_tonic_note 2)
+)
+(icantwait
+   (vocal_tonic_note 4)
+)
+(idontwanttobe
+   (anim_tempo 64)
+   (vocal_tonic_note 3)
+)
+(idwbs
+   (anim_tempo 64)
+   (vocal_tonic_note 11)
+)
+(ihope
+   (vocal_tonic_note 6)
+)
+(ilikeyou
+   (vocal_tonic_note 2)
+)
+(inagaddadavida
+   (vocal_tonic_note 2)
+)
+(insideout2
+   (vocal_tonic_note 11)
+)
+(iris2
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+)
+(irresistible
+   (anim_tempo 16)
+   (band_fail_cue band_fail_rock.cue)
+   (vocal_tonic_note 11)
+   (extra_authoring disc_update)
+)
+(isshereallygoingoutwithhim
+   (drum_bank sfx/kit03_bank.milo)
+   (vocal_tonic_note 10)
+)
+(ithinkimokay
+   (vocal_tonic_note 7)
+)
+(itsalright
+   (vocal_tonic_note 3)
+)
+(iwannadancewithsomebody2
+   (vocal_tonic_note 4)
+)
+(iwillsurvive
+   (anim_tempo 16)
+   (vocal_tonic_note 6)
+   (extra_authoring disc_update)
+)
+(iwillwait
+   (vocal_tonic_note 2)
+)
+(iwontgiveitup
+   (vocal_tonic_note 9)
+)
+(jolene
+   (drum_bank sfx/kit03_bank.milo)
+   (vocal_tonic_note 1)
+)
+(kamikaze
+   (drum_bank sfx/kit03_bank.milo)
+   (vocal_tonic_note 3)
+)
+(kidsofsummer
+   (vocal_tonic_note 2)
+)
+(killingisjustameans
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+   (extra_authoring disc_update)
+)
+(killingmeslowly
+   (vocal_tonic_note 1)
+)
+(kingoftheworld
+   (anim_tempo 64)
+   (vocal_tonic_note 6)
+   (extra_authoring disc_update)
+)
+(learningtofly
+   (vocal_tonic_note 0)
+)
+(leavethelighton
+   (vocal_tonic_note 9)
+)
+(les
+   (vocal_tonic_note 1)
+)
+(lethercry
+   (anim_tempo 16)
+   (vocal_tonic_note 7)
+)
+(letmebenormal
+   (vocal_tonic_note 6)
+)
+(letmefallapart
+   (anim_tempo 64)
+   (vocal_tonic_note 4)
+)
+(letmeout
+   (anim_tempo 64)
+   (vocal_tonic_note 7)
+)
+(letmyloveopenthedoor
+   (vocal_tonic_note 0)
+)
+(letsjustdance
+   (drum_bank sfx/kit02_bank.milo)
+   (vocal_tonic_note 2)
+)
+(letthebadtimesroll
+   (vocal_tonic_note 3)
+)
+(levelofconcern
+   (vocal_tonic_note 4)
+)
+(lifestylesoftherich
+   (vocal_tonic_note 1)
+)
+(lifewaseasier
+   (vocal_tonic_note 1)
+)
+(lightmylove
+   (vocal_tonic_note 5)
+)
+(likenosurprise
+   (vocal_tonic_note 4)
+)
+(littletalks
+   (vocal_tonic_note 1)
+   (extra_authoring disc_update)
+)
+(lockedandloaded
+   (vocal_tonic_note 8)
+)
+(longcoolwoman
+   (drum_bank sfx/kit03_bank.milo)
+   (band_fail_cue band_fail_vintage.cue)
+   (vocal_tonic_note 4)
+)
+(longshot
+   (vocal_tonic_note 4)
+)
+(loseit
+   (vocal_tonic_note 4)
+)
+(lovedyoualittle
+   (anim_tempo 64)
+   (vocal_tonic_note 11)
+)
+(lovefromtheotherside
+   (vocal_tonic_note 4)
+)
+(loveisnotaweapon
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+)
+(loveitwhenyouhateme
+   (vocal_tonic_note 7)
+)
+(lovespell
+   (vocal_tonic_note 2)
+)
+(lovestinks
+   (vocal_tonic_note 0)
+   (extra_authoring disc_update)
+)
+(lovethathurts
+   (drum_bank sfx/kit03_bank.milo)
+   (vocal_tonic_note 10)
+)
+(loveumadly
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+)
+(lustforlife
+   (anim_tempo 64)
+   (band_fail_cue band_fail_rock.cue)
+   (vocal_tonic_note 9)
+)
+(makeshiftvehicles
+   (anim_tempo 64)
+   (vocal_tonic_note 0)
+)
+(makingafire
+   (vocal_tonic_note 4)
+)
+(mantra
+   (vocal_tonic_note 2)
+)
+(masquerader
+   (vocal_tonic_note 6)
+)
+(mastersofmorbidity
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+)
+(matilda
+   (vocal_tonic_note 1)
+)
+(medicine
+   (anim_tempo 16)
+   (vocal_tonic_note 1)
+)
+(memory
+   (anim_tempo 64)
+   (vocal_tonic_note 1)
+)
+(mightberight
+   (vocal_tonic_note 11)
+)
+(milesandmiles
+   (drum_bank sfx/kit03_bank.milo)
+   (vocal_tonic_note 6)
+)
+(mindreader
+   (vocal_tonic_note 0)
+)
+(missedconnection
+   (vocal_tonic_note 9)
+)
+(missingpieve
+   (vocal_tonic_note 0)
+)
+(monalisa
+   (anim_tempo 16)
+   (band_fail_cue band_fail_heavy.cue)
+   (vocal_tonic_note 1)
+   (extra_authoring disc_update)
+)
+(monsters
+   (vocal_tonic_note 0)
+)
+(mothermother
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+)
+(mouthshut
+   (vocal_tonic_note 7)
+)
+(moveover
+   (drum_bank sfx/kit03_bank.milo)
+   (band_fail_cue band_fail_vintage.cue)
+   (vocal_tonic_note 2)
+)
+(musicisworthlivingfor
+   (anim_tempo 64)
+   (vocal_tonic_note 8)
+)
+(mydemons
+   (anim_tempo 64)
+   (vocal_tonic_note 5)
+)
+(myexsbuild
+   (vocal_tonic_note 5)
+)
+(myfriendsoveryou
+   (vocal_tonic_note 2)
+)
+(mywave
+   (vocal_tonic_note 4)
+)
+(mywaysoon
+   (vocal_tonic_note 10)
+)
+(nativetongue
+   (vocal_tonic_note 7)
+)
+(natural
+   (anim_tempo 16)
+   (vocal_tonic_note 2)
+)
+(neverenough
+   (vocal_tonic_note 7)
+)
+(nevermore
+   (vocal_tonic_note 2)
+   (extra_authoring disc_update)
+)
+(ninetynine
+   (vocal_tonic_note 3)
+)
+(novocaine
+   (vocal_tonic_note 9)
+)
+(nowheregeneration
+   (vocal_tonic_note 6)
+)
+(odetomyfamily
+   (vocal_tonic_note 2)
+)
+(oh
+   (vocal_tonic_note 9)
+)
+(oldestdaughter
+   (vocal_tonic_note 11)
+)
+(one
+   (anim_tempo 16)
+   (band_fail_cue band_fail_rock.cue)
+   (vocal_tonic_note 9)
+)
+(onebigholiday
+   (anim_tempo 64)
+   (band_fail_cue band_fail_heavy.cue)
+   (vocal_tonic_note 9)
+)
+(onekindofsolomon
+   (vocal_tonic_note 9)
+)
+(onemanband
+   (anim_tempo 16)
+   (vocal_tonic_note 6)
+)
+(onemorenight
+   (vocal_tonic_note 5)
+)
+(onlylovecansavemenow
+   (anim_tempo 16)
+   (vocal_tonic_note 3)
+)
+(onlywannabewithyou
+   (vocal_tonic_note 6)
+)
+(onmymind
+   (drum_bank sfx/kit05_bank.milo)
+   (anim_tempo 64)
+   (band_fail_cue band_fail_electro.cue)
+   (vocal_tonic_note 2)
+)
+(openwater
+   (vocal_tonic_note 6)
+)
+(orphans
+   (vocal_tonic_note 11)
+)
+(ourlovewillstillbethere
+   (drum_bank sfx/kit03_bank.milo)
+   (vocal_tonic_note 9)
+)
+(overmyhead
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 10)
+)
+(packofsmokes
+   (drum_bank sfx/kit04_bank.milo)
+   (anim_tempo 64)
+   (vocal_tonic_note 0)
+)
+(panic2
+   (vocal_tonic_note 7)
+)
+(panicattack2
+   (vocal_tonic_note 8)
+)
+(paralyzed
+   (vocal_tonic_note 3)
+)
+(paranoia
+   (vocal_tonic_note 2)
+)
+(pathkeeper
+   (vocal_tonic_note 3)
+)
+(peacethatstartsawar
+   (anim_tempo 64)
+   (vocal_tonic_note 9)
+)
+(picturesofgirls
+   (vocal_tonic_note 1)
+)
+(picturesofmatchstickmen
+   (drum_bank sfx/kit03_bank.milo)
+   (anim_tempo 16)
+   (vocal_tonic_note 2)
+)
+(poisonpill
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+)
+(postpone
+   (vocal_tonic_note 2)
+)
+(prettymouth
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+)
+(pride
+   (band_fail_cue band_fail_rock.cue)
+   (vocal_tonic_note 11)
+)
+(promiseeverything
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+)
+(promqueen
+   (vocal_tonic_note 11)
+)
+(radio
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+)
+(raindown
+   (vocal_tonic_note 0)
+)
+(readyforcombat
+   (vocal_tonic_note 0)
+)
+(rebelheart
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+)
+(rebellion
+   (band_fail_cue band_fail_heavy.cue)
+   (vocal_tonic_note 1)
+)
+(redneck
+   (vocal_tonic_note 2)
+)
+(reminiscing
+   (drum_bank sfx/kit03_bank.milo)
+   (vocal_tonic_note 2)
+)
+(renegades
+   (vocal_tonic_note 2)
+)
+(rescued
+   (vocal_tonic_note 2)
+)
+(rescueme2
+   (vocal_tonic_note 2)
+)
+(resentment
+   (vocal_tonic_note 9)
+)
+(richgirl
+   (vocal_tonic_note 5)
+)
+(ride2
+   (anim_tempo 16)
+   (vocal_tonic_note 4)
+)
+(righthererightnow
+   (vocal_tonic_note 2)
+)
+(riptide2
+   (vocal_tonic_note 4)
+)
+(roadtonowhere
+   (anim_tempo 64)
+   (vocal_tonic_note 1)
+)
+(rollercoaster
+   (anim_tempo 64)
+   (vocal_tonic_note 10)
+)
+(rolling7s
+   (vocal_tonic_note 10)
+)
+(rolltome
+   (vocal_tonic_note 6)
+)
+(runaround
+   (vocal_tonic_note 7)
+)
+(runaway2
+   (anim_tempo 64)
+   (vocal_tonic_note 0)
+)
+(runforcover
+   (anim_tempo 64)
+   (band_fail_cue band_fail_rock.cue)
+   (vocal_tonic_note 11)
+)
+(runningwiththewild
+   (vocal_tonic_note 9)
+)
+(runwithyou
+   (anim_tempo 64)
+   (vocal_tonic_note 4)
+)
+(sacrifice
+   (anim_tempo 64)
+   (vocal_tonic_note 8)
+)
+(salvation
+   (vocal_tonic_note 4)
+)
+(saveahorse
+   (vocal_tonic_note 4)
+)
+(saveyourself
+   (anim_tempo 64)
+   (vocal_tonic_note 8)
+)
+(sawlightning
+   (vocal_tonic_note 7)
+)
+(season5
+   (anim_tempo 16)
+   (vocal_tonic_note 7)
+)
+(selfdestructor
+   (vocal_tonic_note 6)
+)
+(sendmeonmyway
+   (vocal_tonic_note 0)
+)
+(settling
+   (vocal_tonic_note 4)
+)
+(sexxlaws
+   (vocal_tonic_note 11)
+)
+(shakemeup
+   (vocal_tonic_note 3)
+)
+(shame
+   (vocal_tonic_note 2)
+)
+(shame2
+   (drum_bank sfx/kit04_bank.milo)
+   (vocal_tonic_note 1)
+)
+(shapeofyou
+   (vocal_tonic_note 1)
+)
+(shapeshifter
+   (anim_tempo 64)
+   (vocal_tonic_note 11)
+)
+(shedrivesmecrazy
+   (vocal_tonic_note 9)
+)
+(shelookssoperfect
+   (anim_tempo 64)
+   (vocal_tonic_note 4)
+)
+(shesalliwannabe
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+)
+(shesgotsorcery
+   (anim_tempo 64)
+   (vocal_tonic_note 10)
+)
+(shimmer
+   (vocal_tonic_note 7)
+)
+(shiver
+   (vocal_tonic_note 4)
+)
+(shy
+   (vocal_tonic_note 9)
+)
+(sickness
+   (anim_tempo 16)
+   (vocal_tonic_note 2)
+)
+(simmer
+   (vocal_tonic_note 7)
+)
+(simplify
+   (vocal_tonic_note 4)
+)
+(sixfeetunder
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+)
+(sixteen2
+   (vocal_tonic_note 2)
+)
+(slide
+   (vocal_tonic_note 8)
+)
+(smile
+   (anim_tempo 16)
+   (vocal_tonic_note 6)
+)
+(soberup
+   (anim_tempo 64)
+   (vocal_tonic_note 5)
+)
+(some1else
+   (vocal_tonic_note 9)
+)
+(somekindof
+   (vocal_tonic_note 11)
+)
+(somenights
+   (vocal_tonic_note 1)
+)
+(someonetoyou
+   (vocal_tonic_note 2)
+)
+(sometimes
+   (vocal_tonic_note 3)
+)
+(song3
+   (anim_tempo 64)
+   (vocal_tonic_note 1)
+)
+(sos
+   (vocal_tonic_note 4)
+)
+(speedofsound2
+   (vocal_tonic_note 11)
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (song
+      (tracks
+         (
+            (drum
+               (0 1)
+            )
+            (bass
+               (2 3)
+            )
+            (guitar
+               (4 5)
+            )
+            (vocals
+               (6 7)
+            )
+            (keys
+               (8 9)
+            )
+         )
+      )
+   )
+   (rank
+      (drum 151)
+      (guitar 176)
+      (bass 135)
+      (vocals 279)
+      (keys 170)
+      (real_keys 250)
+      (band 215)
+   )
+   (keys_author
+      "Bansheeflyer, BowlsforRick"
+   )
+   (version 30)
+)
+(stayhigh
+   (drum_bank sfx/kit04_bank.milo)
+   (anim_tempo 16)
+   (vocal_tonic_note 9)
+)
+(stayimissedyou
+   (anim_tempo 64)
+   (vocal_tonic_note 1)
+)
+(stealmysunshine
+   (anim_tempo 16)
+   (vocal_tonic_note 4)
+)
+(stillbreathing
+   (anim_tempo 64)
+   (vocal_tonic_note 1)
+)
+(stilltheone
+   (vocal_tonic_note 4)
+)
+(stolendance
+   (anim_tempo 64)
+   (vocal_tonic_note 11)
+)
+(stupidgirl
+   (vocal_tonic_note 6)
+)
+(sugarhoneyiceandtea
+   (vocal_tonic_note 0)
+)
+(summertimeboy
+   (band_fail_cue band_fail_rock.cue)
+   (vocal_tonic_note 2)
+   (extra_authoring disc_update)
+)
+(sundaybloodysunday
+   (vocal_tonic_note 10)
+   (extra_authoring disc_update)
+)
+(superposition
+   (vocal_tonic_note 9)
+)
+(survive
+   (vocal_tonic_note 11)
+)
+(sweaterweather
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+   (extra_authoring disc_update)
+)
+(sweaterweather2
+   (vocal_tonic_note 7)
+   (extra_authoring disc_update)
+)
+(tailspin
+   (vocal_tonic_note 0)
+)
+(takeitoff
+   (vocal_tonic_note 11)
+)
+(takemeaway
+   (vocal_tonic_note 1)
+)
+(takemybreathaway
+   (vocal_tonic_note 2)
+)
+(takewhatyouwant
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 1)
+)
+(thankgodforgirls
+   (anim_tempo 16)
+   (vocal_tonic_note 9)
+)
+(thatsmykindanight
+   (vocal_tonic_note 4)
+)
+(thebest
+   (vocal_tonic_note 2)
+)
+(thebirdandtheworm
+   (vocal_tonic_note 6)
+)
+(thecall
+   (vocal_tonic_note 2)
+)
+(thecomamachine
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+)
+(thefall
+   (vocal_tonic_note 2)
+)
+(thefuneral
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+)
+(theheartfromyourhate
+   (vocal_tonic_note 2)
+)
+(thehills2
+   (vocal_tonic_note 2)
+)
+(themiracle
+   (band_fail_cue band_fail_rock.cue)
+   (vocal_tonic_note 9)
+)
+(themotherweshare
+   (drum_bank sfx/kit05_bank.milo)
+   (anim_tempo 16)
+   (vocal_tonic_note 1)
+)
+(thepallbearerwalksalone
+   (anim_tempo 64)
+   (vocal_tonic_note 4)
+)
+(thetitletrack
+   (anim_tempo 64)
+   (vocal_tonic_note 10)
+)
+(thewayyouusedtodo
+   (anim_tempo 16)
+   (vocal_tonic_note 7)
+)
+(thewind
+   (vocal_tonic_note 6)
+)
+(thinkingemoji
+   (anim_tempo 16)
+   (vocal_tonic_note 6)
+)
+(thiscitymadeus
+   (vocal_tonic_note 4)
+)
+(threelives
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+   (extra_authoring disc_update)
+)
+(throughthenoise
+   (anim_tempo 16)
+   (vocal_tonic_note 2)
+)
+(thunderandlightning
+   (band_fail_cue band_fail_heavy.cue)
+   (vocal_tonic_note 3)
+   (extra_authoring disc_update)
+)
+(tomyromeo
+   (vocal_tonic_note 2)
+   (extra_authoring disc_update)
+)
+(tonight
+   (vocal_tonic_note 4)
+)
+(trainwreck1979
+   (band_fail_cue band_fail_heavy.cue)
+   (vocal_tonic_note 7)
+   (extra_authoring disc_update)
+)
+(treasure
+   (band_fail_cue band_fail_rock.cue)
+   (vocal_tonic_note 0)
+)
+(trouble
+   (vocal_tonic_note 0)
+)
+(trueconfessions
+   (vocal_tonic_note 2)
+)
+(twilightofthethundergod
+   (anim_tempo 64)
+   (vocal_tonic_note 1)
+)
+(twoshots
+   (vocal_tonic_note 8)
+)
+(ultraviolet
+   (anim_tempo 64)
+   (vocal_tonic_note 0)
+)
+(umathurman
+   (vocal_tonic_note 4)
+)
+(unheavenlycreatures
+   (vocal_tonic_note 5)
+)
+(unsainted
+   (vocal_tonic_note 11)
+)
+(usedtolike
+   (vocal_tonic_note 8)
+)
+(vanhorn
+   (vocal_tonic_note 8)
+)
+(vertigo
+   (band_fail_cue band_fail_rock.cue)
+   (vocal_tonic_note 4)
+)
+(visitor
+   (vocal_tonic_note 7)
+)
+(warrior
+   (vocal_tonic_note 0)
+)
+(wars
+   (vocal_tonic_note 6)
+)
+(wasteamoment
+   (anim_tempo 64)
+   (vocal_tonic_note 2)
+   (extra_authoring disc_update)
+)
+(wearebetween
+   (vocal_tonic_note 2)
+)
+(welcomehome2
+   (vocal_tonic_note 7)
+)
+(welcomehome3
+   (anim_tempo 64)
+   (vocal_tonic_note 5)
+)
+(welcometomylife
+   (vocal_tonic_note 1)
+)
+(whataboutlove
+   (anim_tempo 16)
+   (vocal_tonic_note 2)
+)
+(whatmakesyoubeautiful
+   (vocal_tonic_note 4)
+)
+(whatthehell
+   (anim_tempo 64)
+   (vocal_tonic_note 9)
+)
+(whatyouknow
+   (vocal_tonic_note 6)
+   (extra_authoring disc_update)
+   (upgrade_version 1)
+   (song
+      (tracks
+         (
+            (drum
+               (0 1)
+            )
+            (bass
+               (2 3)
+            )
+            (guitar
+               (4 5)
+            )
+            (vocals
+               (6 7)
+            )
+            (keys
+               (8 9)
+            )
+         )
+      )
+   )
+   (rank
+      (band 240)
+      (guitar 215)
+      (drum 175)
+      (bass 230)
+      (vocals 215)
+      (keys 153)
+      (real_keys 153)
+   )
+   (keys_author
+      "Gigakoops"
+   )
+   (song_tonality 1)
+   (version 30)
+)
+(whatyouneed
+   (vocal_tonic_note 6)
+)
+(whenamigonnaloseyou
+   (vocal_tonic_note 8)
+)
+(whenimgone2
+   (vocal_tonic_note 8)
+)
+(whenlegendsrise
+   (vocal_tonic_note 4)
+)
+(whenthecurtainfalls
+   (anim_tempo 16)
+   (vocal_tonic_note 7)
+)
+(whentheseasonschange
+   (vocal_tonic_note 4)
+)
+(whereismymind
+   (vocal_tonic_note 4)
+)
+(wheretheheartis
+   (vocal_tonic_note 2)
+)
+(wherethestreetshavenoname
+   (vocal_tonic_note 2)
+)
+(whitetrashmillionaire
+   (anim_tempo 64)
+   (vocal_tonic_note 6)
+)
+(whodoyoulove
+   (vocal_tonic_note 4)
+)
+(whosyourlover
+   (anim_tempo 64)
+   (vocal_tonic_note 11)
+)
+(wildchild
+   (drum_bank sfx/kit04_bank.milo)
+   (vocal_tonic_note 7)
+)
+(wildthing
+   (vocal_tonic_note 9)
+)
+(worstday
+   (drum_bank sfx/kit05_bank.milo)
+   (vocal_tonic_note 2)
+)
+(wreckingmachine
+   (vocal_tonic_note 2)
+)
+(youandme
+   (anim_tempo 64)
+   (vocal_tonic_note 4)
+)
+(youngblood
+   (band_fail_cue band_fail_rock.cue)
+   (vocal_tonic_note 10)
+)
+(youngblood2
+   (vocal_tonic_note 2)
 )
 (burnitdown_rbn
    (extra_authoring disc_update)
@@ -64894,18 +67169,6 @@ missing_song_data
 (chandelier
    (extra_authoring disc_update)
 )
-(cocoon
-   (extra_authoring disc_update)
-)
-(desire
-   (extra_authoring disc_update)
-)
-(dontwannafight
-   (extra_authoring disc_update)
-)
-(downinahole
-   (extra_authoring disc_update)
-)
 (eightbitbeat
    (extra_authoring disc_update)
    (upgrade_version 1)
@@ -64946,43 +67209,10 @@ missing_song_data
 (foreplaylongtime_short
    (extra_authoring disc_update)
 )
-(forgetabouttomorrow
-   (extra_authoring disc_update)
-)
-(foundoutaboutyou
-   (extra_authoring disc_update)
-)
 (greengrass_short
    (extra_authoring disc_update)
 )
-(happy2
-   (extra_authoring disc_update)
-)
-(heartbreakofthecentury
-   (extra_authoring disc_update)
-)
-(heyjealousy
-   (extra_authoring disc_update)
-)
 (higher_rbn
-   (extra_authoring disc_update)
-)
-(homegrown
-   (extra_authoring disc_update)
-)
-(honeyimgood
-   (extra_authoring disc_update)
-)
-(irresistible
-   (extra_authoring disc_update)
-)
-(iwillsurvive
-   (extra_authoring disc_update)
-)
-(killingisjustameans
-   (extra_authoring disc_update)
-)
-(kingoftheworld
    (extra_authoring disc_update)
 )
 (knightsofcydonia
@@ -65036,18 +67266,6 @@ missing_song_data
    (vocal_tonic_note 4)
    (version 30)
 )
-(littletalks
-   (extra_authoring disc_update)
-)
-(lovestinks
-   (extra_authoring disc_update)
-)
-(monalisa
-   (extra_authoring disc_update)
-)
-(nevermore
-   (extra_authoring disc_update)
-)
 (sandstorm
    (extra_authoring disc_update)
    (upgrade_version 1)
@@ -65084,9 +67302,6 @@ missing_song_data
    (vocal_tonic_note 4)
    (song_tonality 1)
    (version 30)
-)
-(sorry_bieber
-   (extra_authoring disc_update)
 )
 (starlight2
    (extra_authoring disc_update)
@@ -65139,18 +67354,6 @@ missing_song_data
    (vocal_tonic_note 11)
    (version 30)
 )
-(summertimeboy
-   (extra_authoring disc_update)
-)
-(sundaybloodysunday
-   (extra_authoring disc_update)
-)
-(sweaterweather
-   (extra_authoring disc_update)
-)
-(sweaterweather2
-   (extra_authoring disc_update)
-)
 (tasteslikekevinbacon_rbn
    (extra_authoring disc_update)
 )
@@ -65165,88 +67368,11 @@ missing_song_data
    (game_origin rb1_dlc)
    (rating 1)
 )
-(thisishowwedoit
-   (extra_authoring disc_update)
-)
-(threelives
-   (extra_authoring disc_update)
-)
-(thunderandlightning
-   (extra_authoring disc_update)
-)
-(tomyromeo
-   (extra_authoring disc_update)
-)
 (trainkeptarollin_short
-   (extra_authoring disc_update)
-)
-(trainwreck1979
    (extra_authoring disc_update)
 )
 (UGC_5002223
    (extra_authoring disc_update)
-)
-(UGC_5003595
-   (extra_authoring disc_update)
-   (upgrade_version 1)
-   (rank
-      (drum 0)
-      (guitar 1)
-      (bass 0)
-      (vocals 0)
-      (band 0)
-      (real_guitar 1)
-      (real_bass 0)
-   )
-   (real_guitar_tuning
-      (0 0 0 0 0 0)
-   )
-   (strings_author
-      "ataeaf"
-   )
-)
-(wasteamoment
-   (extra_authoring disc_update)
-)
-(whatyouknow
-   (extra_authoring disc_update)
-   (upgrade_version 1)
-   (song
-      (tracks
-         (
-            (drum
-               (0 1)
-            )
-            (bass
-               (2 3)
-            )
-            (guitar
-               (4 5)
-            )
-            (vocals
-               (6 7)
-            )
-            (keys
-               (8 9)
-            )
-         )
-      )
-   )
-   (rank
-      (band 240)
-      (guitar 215)
-      (drum 175)
-      (bass 230)
-      (vocals 215)
-      (keys 153)
-      (real_keys 153)
-   )
-   (keys_author
-      "Gigakoops"
-   )
-   (vocal_tonic_note 6)
-   (song_tonality 1)
-   (version 30)
 )
 (wontgetfooled_short
    (extra_authoring disc_update)

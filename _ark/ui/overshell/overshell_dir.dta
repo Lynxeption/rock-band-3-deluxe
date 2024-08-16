@@ -245,7 +245,6 @@
                   {push_back $options wii_friends_view_invite}}
                #endif
                {push_back $options overshell_return}
-               {unless $dx_event_mode
                   #ifdef HX_WII
                   {if_else
                      {overshell in_wiifriend_invite}
@@ -265,14 +264,12 @@
                                  {switch $dx_connected_server
                                     (none {push_back $options overshell_online_options})
                                     (gocentral {push_back $options go_overshell_online_options})
-                                    (ashcentral {push_back $options ash_overshell_online_options})
                                     (live {push_back $options live_overshell_online_options})
                                     (liveless {push_back $options liveless_overshell_online_options})
                                  }
                                  {switch $dx_connected_server
                                     (none {push_back $options overshell_register_online})
                                     (gocentral {push_back $options go_overshell_register_online})
-                                    (ashcentral {push_back $options ash_overshell_register_online})
                                     (live {push_back $options live_overshell_register_online})
                                     (liveless {push_back $options liveless_overshell_register_online})
                                  }
@@ -287,14 +284,12 @@
                            {switch $dx_connected_server
                               (none {push_back $options overshell_online_options})
                               (gocentral {push_back $options go_overshell_online_options})
-                              (ashcentral {push_back $options ash_overshell_online_options})
                               (live {push_back $options live_overshell_online_options})
                               (liveless {push_back $options liveless_overshell_online_options})
                            }
                            {switch $dx_connected_server
                               (none {push_back $options overshell_register_online})
                               (gocentral {push_back $options go_overshell_register_online})
-                              (ashcentral {push_back $options ash_overshell_register_online})
                               (live {push_back $options live_overshell_register_online})
                               (liveless {push_back $options liveless_overshell_register_online})
                            }
@@ -320,14 +315,12 @@
                         {switch $dx_connected_server
                            (none {push_back $options overshell_online_options})
                            (gocentral {push_back $options go_overshell_online_options})
-                           (ashcentral {push_back $options ash_overshell_online_options})
                            (live {push_back $options live_overshell_online_options})
                            (liveless {push_back $options liveless_overshell_online_options})
                         }
                         {switch $dx_connected_server
                            (none {push_back $options overshell_register_online})
                            (gocentral {push_back $options go_overshell_register_online})
-                           (ashcentral {push_back $options ash_overshell_register_online})
                            (live {push_back $options live_overshell_register_online})
                            (liveless {push_back $options liveless_overshell_register_online})
                         }
@@ -343,17 +336,11 @@
                   {if {&& {! {session_mgr is_local}} {> $dx_users 1}}
                      {push_back $options overshell_dx_quick_chat} ; dx - show quick chat menu when online
                   }
-               }
                {if {&& $dx_event_mode $dx_event_service}
                   {push_back $options os_event_options}
                }
                {push_back $options overshell_change_character}
-               {if_else $dx_event_mode
-                  {if $dx_event_service
-                     {push_back $options overshell_game_options}
-                  }
-                  {push_back $options overshell_game_options}
-               }
+               {push_back $options overshell_game_options}
                {push_back $options overshell_leave}
                {options.lst set_data $options}
                #endif})
@@ -393,7 +380,6 @@
                      {switch $dx_connected_server
                         (none {push_back $options overshell_online_options})
                         (gocentral {push_back $options go_overshell_online_options})
-                        (ashcentral {push_back $options ash_overshell_online_options})
                         (live {push_back $options live_overshell_online_options})
                         (liveless {push_back $options liveless_overshell_online_options})
                      }}
@@ -830,10 +816,10 @@
                      }
                      {push_back $options os_pause}
                   }
-                  {if
-                     $restart
-                     {push_back $options overshell_restart}}
                }
+               {if
+                  $restart
+                  {push_back $options overshell_restart}}
                {set $dx_users 0}
                {user_mgr foreach_user $user
                   {set $dx_users {+ $dx_users 1}}
@@ -1009,7 +995,6 @@
                {switch $dx_connected_server ; dx - changes the message when linking account based on the connected server
                   (none {linking_code_success.lbl set_token_fmt linking_code_success {$profile get_name}})
                   (gocentral {linking_code_success.lbl set_token_fmt go_linking_code_success {$profile get_name}})
-                  (ashcentral {linking_code_success.lbl set_token_fmt ash_linking_code_success {$profile get_name}})
                   (live {linking_code_success.lbl set_token_fmt linking_code_success {$profile get_name}})
                   (liveless {linking_code_success.lbl set_token_fmt linking_code_success {$profile get_name}})
                }
